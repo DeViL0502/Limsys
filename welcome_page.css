@@ -1,0 +1,112 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+@font-face {
+    font-family: "Lobster";
+    src: url(Lobster.ttf);
+}
+#bg{
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    z-index: -1;
+    width:100vw;
+    height: 100vh;
+    opacity: 85%;
+    max-height: 100%;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    margin: 0%;
+    padding: 0%;
+    position: relative;
+    height: 80px;
+    background: #454756;
+    opacity: 96%;
+    width: 100vw\;
+}
+#cd-logo{
+    position: relative;
+    padding: 1%;
+}
+#name{
+    padding-top: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+}
+#login{
+    padding-top: 4px;
+    height: 30px;
+    width: 180px;
+    background-position: 1%;
+    background-color: rgb(255, 155, 0);
+    border-radius: 6px;
+    position: absolute;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: serif;
+    font-size: 13px;
+    margin-top: 18px;
+    margin-left: 1000px;
+}
+#login:hover{
+    padding-top: 4px;
+    height: 32px;
+    width: 184px;
+    background-position: 1%;
+    background-color: rgb(255, 155, 0);
+    border-radius: 6px;
+    position: absolute;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: serif;
+    font-size: 13.5px;
+    margin-top: 17px;
+    margin-left: 998px;
+}
+#welcome{
+    position: relative;
+    top: 3vh;
+    width: 72vw;
+    height: 16vh;
+    text-align: center;
+    font-size: 67px;
+    font-family: "Lobster";
+    color: white;
+    left: 216px;
+}
+#quote1{
+    position: relative;
+    top: 51vh;
+    width: 43vw;
+    height: 7vh;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: cusive;
+    left: 447px;
+}
+#quote2{
+    position: relative;
+    top: 50vh;
+    width: 43vw;
+    height: 7vh;
+    text-align: center;
+    font-size: 20px;
+    color: #f7dc00;
+    font-family: cusive;
+    left: 515px;
+}
+#quote3{
+    position: relative;
+    top: 50vh;
+    width: 43vw;
+    height: 7vh;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+    font-family: cusive;
+    left: 804px;
+}
