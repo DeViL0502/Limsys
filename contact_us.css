@@ -1,0 +1,68 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+@font-face {
+    font-family: "poppin_regular";
+    src: url(Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "poppin_medium";
+    src: url(Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: "poppin_bold";
+    src: url(Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: "poppin_thin";
+    src: url(Poppins-Thin.ttf);
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    background-image: url(login_bg.jpg);
+    background-size: cover;
+}
+.box{
+    display: flexbox;
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    margin-top: 11.5%;
+}
+h1{
+    font-size: 60px;
+    color: white;
+    margin-left: 79px;
+    margin-top: 70px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 440px;
+    text-decoration: underline;
+}
+p{
+    font-size: 30px;
+    color: white;
+    margin-left: 79px;
+    margin-top: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 80%;
+}
+#button{
+    width: 30%;
+    height: 42px;
+    background-image: url(login_bg.jpg);
+    background-size: cover;
+    font-size: 23px;
+    font-family: 'poppin_medium';
+    border-radius: 35px;
+    color: white;
+    position: relative;
+    text-align: center;
+    margin-left: 35%;
+    margin-bottom: 0%;
+    margin-top: -7%;
+    top: 196px;
+}

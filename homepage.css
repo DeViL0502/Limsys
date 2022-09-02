@@ -1,0 +1,274 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+@font-face {
+    font-family: "poppin_regular";
+    src: url(Poppins-Regular.ttf);
+}
+#bg{
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    max-height: 100%;
+    opacity: 80%;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    margin: 0%;
+    padding: 0%;
+    position: relative;
+    height: 80px;
+    background: #454756;
+    opacity: 96%;
+}
+#cd-logo{
+    position: relative;
+    padding: 1%;
+}
+#name{
+    padding-top: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+}
+.home{
+    position: relative;
+    display: inline-block;
+    background-color: rgb(255, 155, 0);
+    width: 90px;
+    height: 27px;
+    top: 18px;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    border-radius: 2px;
+    left: 55px;
+    font-family:'Times New Roman', Times, serif;
+    padding: 8px;
+    padding-top: 2px;
+}
+.profile{
+    position: absolute;
+    display: none;
+    background-color: rgb(255, 155, 0);
+    z-index: 1;
+    width: 106px;
+    height: 30px;
+    padding-top: 4px;
+    top: 34px;
+    font-size: 22px;
+    border-top: 2px solid black;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    left: 0px;
+}
+.history{
+    position: absolute;
+    display: none;
+    background-color: rgb(255, 155, 0);
+    z-index: 1;
+    width: 106px;
+    height: 30px;
+    padding-top: 4px;
+    top: 67px;
+    font-size: 22px;
+    border-top: 2px solid black;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    left: 0px;
+}
+.book{
+    position: absolute;
+    display: none;
+    background-color: rgb(255, 155, 0);
+    z-index: 1;
+    width: 106px;
+    height: 30px;
+    padding-top: 4px;
+    top: 100px;
+    font-size: 22px;
+    border-top: 2px solid black;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    left: 0px;
+}
+.logout{
+    position: absolute;
+    display: none;
+    background-color: rgb(255, 155, 0);
+    z-index: 1;
+    width: 106px;
+    height: 29px;
+    padding-top: 4px;
+    top: 133px;
+    font-size: 21px;
+    border-top: 2px solid black;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    left: 0px;
+}
+.home:hover .profile{
+    display: block;
+}
+.home:hover .history{
+    display: block;
+}
+.home:hover .book{
+    display: block;
+}
+.home:hover .logout{
+    display: block;
+}
+.about{
+    position: absolute;
+    display: inline-block;
+    background-color: rgb(255, 155, 0);
+    width: 100px;
+    height: 27px;
+    top: 18px;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    border-radius: 2px;
+    left: 498px;
+    font-family:'Times New Roman', Times, serif;
+    padding: 8px;
+    padding-top: 2px;
+}
+.contact_us{
+    position: absolute;
+    display: inline-block;
+    background-color: rgb(255, 155, 0);
+    width: 167px;
+    height: 27px;
+    top: 18px;
+    color: white;
+    font-size: 27px;
+    text-align: center;
+    border-radius: 2px;
+    left: 665px;
+    font-family:'Times New Roman', Times, serif;
+    padding: 8px;
+    padding-top: 2px;
+}
+input[type=text]{
+    position: absolute;
+    width: 800px;
+    height: 33px;
+    top: 129px;
+    left: 376px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 22px;
+}
+input[type=image]{
+    position: absolute;
+    height: 29px;
+    width: 28px;
+    top: 136px;
+    left: 1150px;
+}
+.box{
+    position: absolute;
+    background-color: aliceblue;
+    width: 85%;
+    height: 407px;
+    top: 300px;
+    left: 120px;
+    border: 2px solid black;
+}
+#head{
+    position: absolute;
+    top: 8px;
+    left: 523px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+}
+#line{
+    position: absolute;
+    top: -103px;
+    left: 110px;
+    width: 1099px;
+    height: 337px;
+}
+#b1{
+    position: absolute;
+    background-color: aliceblue;
+    width: 204px;
+    top: 80px;
+    left: 84px;
+    border: 1px solid black;
+}
+#b2{
+    position: absolute;
+    background-color: aliceblue;
+    width: 204px;
+    top: 80px;
+    left: 386px;
+    border: 1px solid black;
+}
+#b3{
+    position: absolute;
+    background-color: aliceblue;
+    width: 204px;
+    top: 80px;
+    left: 705px;
+    border: 1px solid black;
+}
+#b4{
+    position: absolute;
+    background-color: aliceblue;
+    width: 204px;
+    top: 80px;
+    left: 1019px;
+    border: 1px solid black;
+}
+#data_analytics{
+    position: relative;
+    background-color: #d48a3a;
+    color: aliceblue;
+    font-family: 'poppin_regular';
+    font-size: 20px;
+    top: 360px;
+    left: 136px;
+    padding: 4px;
+    border-radius: 10px;
+}
+#operating_systems{
+    position: relative;
+    background-color: #d48a3a;
+    color: aliceblue;
+    font-family: 'poppin_regular';
+    font-size: 20px;
+    top: 360px;
+    left: 345px;
+    padding: 4px;
+    border-radius: 10px;
+}
+#web_technologies{
+    position: relative;
+    background-color: #d48a3a;
+    color: aliceblue;
+    font-family: 'poppin_regular';
+    font-size: 20px;
+    top: 360px;
+    left: 566px;
+    padding: 4px;
+    border-radius: 10px;
+}
+#software_testing{
+    position: relative;
+    background-color: #d48a3a;
+    color: aliceblue;
+    font-family: 'poppin_regular';
+    font-size: 20px;
+    top: 360px;
+    left: 786px;
+    padding: 4px;
+    border-radius: 10px;
+}

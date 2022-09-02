@@ -1,0 +1,276 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+@font-face {
+    font-family: "poppin_regular";
+    src: url(Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "poppin_medium";
+    src: url(Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: "poppin_bold";
+    src: url(Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: "poppin_thin";
+    src: url(Poppins-Thin.ttf);
+}
+body{
+    margin: 0%;
+    padding: 0px 0px 50px 0px;
+    background-image: url(login_bg.jpg);
+    background-size: cover;
+}
+.box{
+    margin: 0%;
+    padding: 0%;
+    width: 500px;
+    height: 741px;
+    background-color: white;
+    position: relative;
+    left: 35%;
+    top: 22px;
+    border-radius: 10px;
+}
+#head{
+    font-family: 'poppin_bold';
+    font-size: 39px;
+    position: relative;
+    left: 0px;
+    top: 17px;
+    color: #333333;
+    text-align: center;
+}
+#button2{
+    width: 80%;
+    height: 42px;
+    background-image: url(login_bg.jpg);
+    background-size: cover;
+    font-size: 23px;
+    font-family: 'poppin_medium';
+    border-radius: 35px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    left: 52px; 
+    margin-top: 82%;
+}
+#button2:hover{
+    width: 83%;
+    height: 45px;
+    background-image: url(login_bg.jpg);
+    background-size: cover;
+    font-size: 25px;
+    font-family: 'poppin_medium';
+    border-radius: 35px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    left: 45px; 
+}
+input[id=username]{
+    position:absolute;
+    width: 72%;
+    margin: 25px;
+    border: none;
+    padding-left: 40px;
+    border-bottom: 2px solid #333333;
+    outline: none;
+    font-size: 20px;
+    top: 97px;
+    left: 24px;
+    font-family: 'poppin_medium';
+    background-image: url(username_logo.jpg);
+    background-position: 0%;
+    background-repeat: no-repeat;
+}
+input[id=pass]{
+    position:absolute;
+    width: 72%;
+    margin: 25px;
+    border: none;
+    padding-left: 40px;
+    border-bottom: 2px solid #333333;
+    outline: none;
+    font-size: 20px;
+    top: 182px;
+    left: 24px;
+    font-family: 'poppin_medium';
+    background-image: url(pass_logo.jpg);
+    background-position: 0%;
+    background-repeat: no-repeat;
+}
+input[id=name]{
+    position:absolute;
+    width: 72%;
+    margin: 25px;
+    border: none;
+    padding-left: 40px;
+    border-bottom: 2px solid #333333;
+    outline: none;
+    font-size: 20px;
+    top: 266px;
+    left: 24px;
+    font-family: 'poppin_medium';
+    background-image: url(username_logo.jpg);
+    background-position: 0%;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+}
+input[id=email]{
+    position:absolute;
+    width: 72%;
+    margin: 25px;
+    border: none;
+    padding-left: 40px;
+    border-bottom: 2px solid #333333;
+    outline: none;
+    font-size: 20px;
+    top: 350px;
+    left: 24px;
+    font-family: 'poppin_medium';
+    background-image: url(username_logo.jpg);
+    background-position: 0%;
+    background-repeat: no-repeat;
+}
+input[id=m_number]{
+    position:absolute;
+    width: 72%;
+    margin: 25px;
+    border: none;
+    padding-left: 40px;
+    border-bottom: 2px solid #333333;
+    outline: none;
+    font-size: 20px;
+    top: 434px;
+    left: 24px;
+    font-family: 'poppin_medium';
+    background-image: url(username_logo.jpg);
+    background-position: 0%;
+    background-repeat: no-repeat;
+}
+input[id=class]{
+    position:absolute;
+    width: 72%;
+    margin: 25px;
+    border: none;
+    padding-left: 40px;
+    border-bottom: 2px solid #333333;
+    outline: none;
+    font-size: 20px;
+    top: 510px;
+    left: 24px;
+    font-family: 'poppin_medium';
+    background-image: url(username_logo.jpg);
+    background-position: 0%;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+}
+input[id=male]{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 623px;
+    left: 52px;
+}
+input[id=female]{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 623px;
+    left: 203px;
+}
+input[id=other]{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 623px;
+    left: 364px;
+}
+label[id=ci]{
+    position:absolute;
+    top: 38px;
+    margin: 50px;
+    color: #333333;
+    font-family: 'poppin_regular';
+    font-size: 20px;
+}
+label[id=ps]{
+    position:absolute;
+    top: 122px;
+    margin: 50px;
+    color: #333333;
+    font-family: 'poppin_regular';
+    font-size: 20px;
+}
+label[id=sn]{
+    position:absolute;
+    top: 206px;
+    margin: 50px;
+    color: #333333;
+    font-family: 'poppin_regular';
+    font-size: 20px;
+}
+label[id=mi]{
+    position:absolute;
+    top: 290px;
+    margin: 50px;
+    color: #333333;
+    font-family: 'poppin_regular';
+    font-size: 20px;
+}
+label[id=mn]{
+    position:absolute;
+    top: 374px;
+    margin: 50px;
+    color: #333333;
+    font-family: 'poppin_regular';
+    font-size: 20px;
+}
+label[id=cs]{
+    position:absolute;
+    top: 454px;
+    margin: 50px;
+    color: #333333;
+    font-family: 'poppin_regular';
+    font-size: 20px;
+    text-transform: uppercase;
+}
+label[id=gender]{
+    position:absolute;
+    top: 528px;
+    margin: 50px;
+    color: #333333;
+    font-family: 'poppin_regular';
+    font-size: 20px;
+}
+label[id=m]{
+    position: absolute;
+    top: 567px;
+    margin: 50px;
+    color: #333333;
+    font-family: 'poppin_regular';
+    font-size: 20px;
+    left: 25px;
+}
+label[id=f]{
+    position: absolute;
+    top: 567px;
+    margin: 50px;
+    color: #333333;
+    font-family: 'poppin_regular';
+    font-size: 20px;
+    left: 176px;
+}
+label[id=o]{
+    position: absolute;
+    top: 567px;
+    margin: 50px;
+    color: #333333;
+    font-family: 'poppin_regular';
+    font-size: 20px;
+    left: 336px;
+}

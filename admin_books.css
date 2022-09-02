@@ -1,0 +1,177 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+@font-face {
+    font-family: "poppin_regular";
+    src: url(Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "poppin_medium";
+    src: url(Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: "poppin_bold";
+    src: url(Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: "poppin_thin";
+    src: url(Poppins-Thin.ttf);
+}
+.head{
+    display: inline-block;
+    width: 18%;
+    height: 56px;
+    background-color: rgb(69, 119, 210);
+}
+.top{
+    display: inline-block;
+    width: 82%;
+    height: 56px;
+    background-color: cornflowerblue;
+    position: absolute;
+    left: 18%;
+}
+.tags{
+    display: inline-block;
+    width: 18%;
+    height: 92.4vh;
+    background-color: #293a4e;
+    position: absolute;
+    top: 56px;
+}
+.head img{
+    width: 39px;
+    margin: 6px;
+}
+.head h1{
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+}
+.tags img{                         /* For Male Admin Profile Pic*/
+    width: 75px;
+    padding: 10px;
+    padding-top: 10px;
+    padding-top: 23px;
+}
+
+/*
+For Female Admin Profile Pic
+
+.tags img{
+    width: 97px;              
+    padding: 3px;
+    padding-top: 3px;
+    padding-top: 10px;
+    padding-top: 23px;
+}
+
+*/
+
+.tags p{
+    position: relative;
+    bottom: 85px;
+    margin-left: 94px;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 6px;
+}
+.tags h3{
+    position: relative;
+    margin-top: 25px;
+    margin-left: 0px;
+    font-size: 30px;
+    color: white;
+    padding-bottom: 6px;
+    font-family: 'poppin_regular';
+    padding-left: 23px;
+    padding-top: 2px;
+    width: 92%;
+}
+.tags h3:hover{
+    position: relative;
+    margin-top: 25px;
+    margin-left: 0px;
+    font-size: 30px;
+    color: white;
+    padding-bottom: 6px;
+    font-family: 'poppin_regular';
+    padding-left: 23px;
+    padding-top: 2px;
+    width: 92%;
+    background-color: aqua;
+}
+.book_data{
+    display: inline-block;
+    position: relative;
+    font-size: 37px;
+    margin-left: 22%;
+    margin-top: 29vh;
+    font-family: 'poppin_medium';
+    padding-top: 80px;
+    background-color: red;
+    width: 261px;
+    height: 147px;
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 5px;
+    color: white;
+    background-color: darkorange;
+}
+.book_data:hover{
+    width: 265px;
+    height: 151px;
+    margin-right: -2px;
+    margin-left: 21.9%;
+    top: -2px;
+}
+.insert_book{
+    display: inline-block;
+    position: relative;
+    font-size: 37px;
+    margin-left: 10%;
+    margin-top: 5vh;
+    font-family: 'poppin_medium';
+    padding-top: 80px;
+    background-color: deepskyblue;
+    width: 261px;
+    height: 147px;
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 5px;
+    color: white;
+}
+.insert_book:hover{
+    width: 265px;
+    height: 151px;
+    margin-right: -3px;
+    margin-left: 9.9%;
+    top: -2px;
+}
+.delete_book{
+    display: inline-block;
+    position: relative;
+    font-size: 37px;
+    margin-left: 11%;
+    margin-top: 16vh;
+    font-family: 'poppin_medium';
+    padding-top: 80px;
+    background-color: crimson;
+    width: 261px;
+    height: 147px;
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 5px;
+    color: white;
+}
+.delete_book:hover{
+    width: 265px;
+    height: 151px;
+    margin-right: -3px;
+    margin-left: 10.9%;
+    top: -2px;
+}
+

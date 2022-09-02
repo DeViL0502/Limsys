@@ -1,0 +1,211 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+@font-face {
+    font-family: "poppin_regular";
+    src: url(Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "poppin_medium";
+    src: url(Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: "poppin_bold";
+    src: url(Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: "poppin_thin";
+    src: url(Poppins-Thin.ttf);
+}
+.head{
+    display: inline-block;
+    width: 18%;
+    height: 56px;
+    background-color: rgb(69, 119, 210);
+}
+.top{
+    display: inline-block;
+    width: 82%;
+    height: 56px;
+    background-color: cornflowerblue;
+    position: absolute;
+    left: 18%;
+}
+.tags{
+    display: inline-block;
+    width: 18%;
+    height: 92.4vh;
+    background-color: #293a4e;
+    position: absolute;
+    top: 56px;
+}
+.head img{
+    width: 39px;
+    margin: 6px;
+}
+.head h1{
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+}
+.tags img{                         /* For Male Admin Profile Pic*/
+    width: 75px;
+    padding: 10px;
+    padding-top: 10px;
+    padding-top: 23px;
+}
+
+/*
+For Female Admin Profile Pic
+
+.tags img{
+    width: 97px;              
+    padding: 3px;
+    padding-top: 3px;
+    padding-top: 10px;
+    padding-top: 23px;
+}
+
+*/
+
+.tags p{
+    position: relative;
+    bottom: 85px;
+    margin-left: 94px;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 6px;
+}
+.tags h3{
+    position: relative;
+    margin-top: 25px;
+    margin-left: 0px;
+    font-size: 30px;
+    color: white;
+    padding-bottom: 6px;
+    font-family: 'poppin_regular';
+    padding-left: 23px;
+    padding-top: 2px;
+    width: 92%;
+}
+.tags h3:hover{
+    position: relative;
+    margin-top: 25px;
+    margin-left: 0px;
+    font-size: 30px;
+    color: white;
+    padding-bottom: 6px;
+    font-family: 'poppin_regular';
+    padding-left: 23px;
+    padding-top: 2px;
+    width: 92%;
+    background-color: aqua;
+}
+.box h1{
+    position: relative;
+    color: #666;
+    font-size: 37px;
+    margin-left: 71.3%;
+    margin-top: 7vh;
+    font-family: 'poppin_medium';
+    text-decoration: underline;
+}
+.box2{
+    overflow: scroll;
+    max-height: 75.4vh;
+}
+.box2 table{
+    margin-left: 21.5%;
+    margin-top: 2%;
+    border-top: 2px solid black;
+}
+.box2 table th{
+    margin: 0%;
+    padding-left: 19px;
+    font-size: 24px;
+    width: 185px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+.box2 table td{
+    margin: 0%;
+    padding: 12px 0px 12px 0px;
+    font-size: 24px;
+    width: 140px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+.box3{
+    position: absolute;
+    top: 160px;
+    margin-left: 65vw;
+    width: 497px;
+    height: 545px;
+    border: 3px solid black;
+    background-image: url(login_bg.jpg);
+    background-size: cover;
+}
+input[id=book_id]{
+    position: relative;
+    width: 72%;
+    height: 38px;
+    margin: 25px;
+    border: none;
+    padding-left: 40px;
+    border-bottom: 2px solid #333333;
+    outline: none;
+    font-size: 20px;
+    top: 110px;
+    left: 24px;
+    font-family: 'poppin_medium';
+    background-image: url(username_logo.jpg);
+    background-position: 0%;
+    background-repeat: no-repeat;
+}
+input[id=quantity]{
+    position: relative;
+    width: 72%;
+    height: 38px;
+    margin: 25px;
+    border: none;
+    padding-left: 40px;
+    border-bottom: 2px solid #333333;
+    outline: none;
+    font-size: 20px;
+    top: 113px;
+    left: 24px;
+    font-family: 'poppin_medium';
+    background-image: url(username_logo.jpg);
+    background-position: 0%;
+    background-repeat: no-repeat;
+}
+label{
+    position: relative;
+    font-size: 20px;
+    top: 134px;
+    margin: 50px;
+    color: #333333;
+    font-family: 'poppin_regular';
+}
+input[type=submit]{
+    width: 80%;
+    height: 42px;
+    background-image: url(login_bg.jpg);
+    background-size: cover;
+    font-size: 23px;
+    font-family: 'poppin_medium';
+    border-radius: 35px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    left: 52px; 
+    margin-top: 57%;
+    border: none;
+}

@@ -1,0 +1,195 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+@font-face {
+    font-family: "poppin_regular";
+    src: url(Poppins-Regular.ttf);
+}
+#bg{
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    max-height: 100%;
+    opacity: 80%;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    margin: 0%;
+    padding: 0%;
+    position: relative;
+    height: 80px;
+    background: #454756;
+    opacity: 96%;
+}
+#cd-logo{
+    position: relative;
+    padding: 1%;
+}
+#name{
+    padding-top: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+}
+.home{
+    position: relative;
+    display: inline-block;
+    background-color: rgb(255, 155, 0);
+    width: 90px;
+    height: 27px;
+    top: 18px;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    border-radius: 2px;
+    left: 55px;
+    font-family:'Times New Roman', Times, serif;
+    padding: 8px;
+    padding-top: 2px;
+}
+.profile{
+    position: absolute;
+    display: none;
+    background-color: rgb(255, 155, 0);
+    z-index: 1;
+    width: 106px;
+    height: 30px;
+    padding-top: 4px;
+    top: 34px;
+    font-size: 22px;
+    border-top: 2px solid black;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    left: 0px;
+}
+.history{
+    position: absolute;
+    display: none;
+    background-color: rgb(255, 155, 0);
+    z-index: 1;
+    width: 106px;
+    height: 30px;
+    padding-top: 4px;
+    top: 67px;
+    font-size: 22px;
+    border-top: 2px solid black;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    left: 0px;
+}
+.book{
+    position: absolute;
+    display: none;
+    background-color: rgb(255, 155, 0);
+    z-index: 1;
+    width: 106px;
+    height: 30px;
+    padding-top: 4px;
+    top: 100px;
+    font-size: 22px;
+    border-top: 2px solid black;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    left: 0px;
+}
+.logout{
+    position: absolute;
+    display: none;
+    background-color: rgb(255, 155, 0);
+    z-index: 1;
+    width: 106px;
+    height: 29px;
+    padding-top: 4px;
+    top: 133px;
+    font-size: 21px;
+    border-top: 2px solid black;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    left: 0px;
+}
+.home:hover .profile{
+    display: block;
+}
+.home:hover .history{
+    display: block;
+}
+.home:hover .book{
+    display: block;
+}
+.home:hover .logout{
+    display: block;
+}
+.about{
+    position: absolute;
+    display: inline-block;
+    background-color: rgb(255, 155, 0);
+    width: 100px;
+    height: 27px;
+    top: 18px;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    border-radius: 2px;
+    left: 498px;
+    font-family:'Times New Roman', Times, serif;
+    padding: 8px;
+    padding-top: 2px;
+}
+.contact_us{
+    position: absolute;
+    display: inline-block;
+    background-color: rgb(255, 155, 0);
+    width: 167px;
+    height: 27px;
+    top: 18px;
+    color: white;
+    font-size: 27px;
+    text-align: center;
+    border-radius: 2px;
+    left: 665px;
+    font-family:'Times New Roman', Times, serif;
+    padding: 8px;
+    padding-top: 2px;
+}
+.box1 p{
+    padding-top: 50px;
+    text-align: center;
+    font-family:'poppin_medium';
+    font-size: 32px;
+    color: #666;
+    
+}
+#button{
+    width: 30%;
+    height: 42px;
+    background-image: url(login_bg.jpg);
+    background-size: cover;
+    font-size: 23px;
+    font-family: 'poppin_medium';
+    border-radius: 35px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 652px;
+    left: 35%;
+    padding-top: 14px;
+}
+#button:hover{
+    width: 30.5%;
+    height: 44px;
+    background-image: url(login_bg.jpg);
+    background-size: cover;
+    font-size: 23px;
+    font-family: 'poppin_medium';
+    border-radius: 35px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 651px;
+    left: 34.8%;
+    padding-top: 14px;
+    margin-top: 0px;
+}
