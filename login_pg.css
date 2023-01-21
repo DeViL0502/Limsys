@@ -1,6 +1,6 @@
 *{
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
 }
 @font-face {
     font-family: "poppin_regular";
@@ -18,22 +18,34 @@
     font-family: "poppin_thin";
     src: url(Poppins-Thin.ttf);
 }
-body{
-    margin: 0%;
-    padding: 0%;
-    background-image: url(login_bg.jpg);
-    background-size: cover;
+.outer{
+    background-color: #c1edfe;
+    width: 100vw;
+    height: 100vh;
+}
+.inner-box{
+    width: 68%;
+    height: 75%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 20px 2px #888888;;
+    background-color: white;
+    position: relative;
+    margin: auto;
+    top: 10%;
+    display: flex;
 }
 .box{
     margin: 0%;
     padding: 0%;
-    width: 500px;
-    height: 630px;
-    background-color: white;
+    width: 510px;
+    background-color: antiquewhite;
     position: relative;
-    left: 35%;
-    top: 53px;
-    border-radius: 10px;
+    left: 51%;
+    top: 0px;
+    border-left: 2px solid;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 #head{
     font-family: 'poppin_bold';
@@ -47,60 +59,19 @@ body{
 #button1{
     width: 80%;
     height: 42px;
-    background-image: url(login_bg.jpg);
-    background-size: cover;
     font-size: 23px;
     font-family: 'poppin_medium';
-    border-radius: 35px;
-    color: white;
+    border-radius: 10px;
     position: relative;
     text-align: center;
-    top: 150px;
-    left: 52px; 
+    top: 120px;
+    left: 52px;
+    color: black;
+    background: #c1edfe;
+    cursor: pointer;
 }
 #button1:hover{
-    width: 83%;
-    height: 45px;
-    background-image: url(login_bg.jpg);
-    background-size: cover;
-    font-size: 25px;
-    font-family: 'poppin_medium';
-    border-radius: 35px;
-    color: white;
-    position: relative;
-    text-align: center;
-    top: 151px;
-    left: 45px; 
-    margin-top: -3px;
-}
-#button2{
-    width: 80%;
-    height: 42px;
-    background-image: url(login_bg.jpg);
-    background-size: cover;
-    font-size: 23px;
-    font-family: 'poppin_medium';
-    border-radius: 35px;
-    color: white;
-    position: absolute;
-    text-align: center;
-    top: 542px;
-    left: 52px; 
-}
-#button2:hover{
-    width: 83%;
-    height: 45px;
-    background-image: url(login_bg.jpg);
-    background-size: cover;
-    font-size: 25px;
-    font-family: 'poppin_medium';
-    border-radius: 35px;
-    color: white;
-    position: relative;
-    text-align: center;
-    top: 184px;
-    left: 45px; 
-    margin-top: -3px;
+    background-color: bisque;
 }
 #or{
     font-size: 20px;
@@ -129,9 +100,7 @@ input[id=username]{
     top: 63px;
     left: 24px;
     font-family: 'poppin_medium';
-    background-image: url(username_logo.jpg);
-    background-position: 0%;
-    background-repeat: no-repeat;
+    background-color: antiquewhite;
 }
 input[id=pass]{
     position: relative;
@@ -145,9 +114,13 @@ input[id=pass]{
     top: 63px;
     left: 24px;
     font-family: 'poppin_medium';
-    background-image: url(pass_logo.jpg);
-    background-position: 0%;
-    background-repeat: no-repeat;
+    background-color: antiquewhite;
+}
+input[id=username]:focus{
+    border-bottom: 2px solid cyan;
+}
+input[id=pass]:focus{
+    border-bottom: 2px solid cyan;
 }
 label{
     position: relative;
@@ -155,12 +128,45 @@ label{
     margin: 50px;
     color: #333333;
     font-family: 'poppin_regular';
+    font-weight: bold;
 }
 #forgot{
     font-family: 'poppin_regular';
-    font-size: 16px;
+    font-size: 18px;
     position: absolute;
-    left: 304px;
-    bottom: 248px;
-    color: red;
+    left: 35%;
+    bottom: 180px;
+    color: black;
+}
+#forgot:hover{
+    color:red;
+}
+.existing{
+    font-family: 'poppin_medium';
+    font-size: 17px;
+    position: relative;
+    left: 27%;
+    top: 26%;
+    color: black;
+}
+.reg_btn{
+    font-family: 'poppin_medium';
+    font-size: 17px;
+    position: relative;
+    left: 63%;
+    top: 114px;
+    color: black;
+    text-decoration: none;
+}
+.reg_btn:hover{
+    color: chocolate;
+}
+.logo{
+    width: 400px;
+    position: relative;
+    top: 10%;
+    left: 70px;
+}
+.image-box{
+    width: 0%;
 }

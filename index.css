@@ -1,0 +1,122 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+@font-face {
+    font-family: "Poppin-Bold";
+    src: url(Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: "Poppin-Medium";
+    src: url(Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: "EBGaramond-Italic";
+    src: url(EBGaramond-MediumItalic.ttf);
+}
+.outer{
+    background-color: #c1edfe;
+    width: 100vw;
+    height: 100vh;
+}
+.inner-box{
+    width: 75%;
+    height: 75%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 20px 2px #888888;;
+    background-color: white;
+    position: relative;
+    margin: auto;
+    top: 5%;
+}
+.welcome-img{
+    float: right;
+    position: relative;
+    top: 10%;
+    margin-right: 50px;
+    width: 50%;
+}
+.welcome-head{
+    font-family: 'Poppin-Bold';
+    text-align: left;
+    font-size: 6rem;
+    position: relative;
+    top: 3%;
+    margin-left: 4%;
+    color: #cc3f29;
+}
+.welcome-subhead{
+    font-family: 'Poppin-Medium';
+    margin-left: 4.5%;
+    font-size: 1.6rem;
+    position: relative;
+    top: -15px;
+    word-spacing: 6px;
+}
+.welcome-quote{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-left: 4.5%;
+    text-align: justify;
+    font-family: 'EBGaramond-Italic';
+    padding: 15px;
+    width: 35%;
+    background-color: bisque;
+    border: 2px solid;
+    border-radius: 10px;
+}
+.welcome-quote-img1{
+    width: 40px;
+}
+.welcome-quote-img2{
+    width: 40px;
+    transform: rotate(180deg);
+}
+.welcome-btn{
+    width: 20%;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #c1edfe;
+    color: black;
+    border: 1px solid;
+    margin-left: 4.5%;
+    position: relative;
+    top: 5%;
+    font-size: 1.5rem;
+    font-family: 'Poppin-Medium';
+    cursor: pointer;
+}
+.welcome-btn:hover{
+    background: bisque;
+}
+.welcome-clock{
+    background-color: bisque;
+}
+.clock {  
+    position: relative;
+    top: 15%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #cc3f29;
+    font-size: 40px;
+    font-family: 'Poppin-Bold';
+    margin: auto;
+    width: 320px;
+    left: 12%;
+    padding: 0px 5px 15px 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    background: bisque;
+    text-align: center;
+    letter-spacing: 8px;
+}  
+.clock-label{
+    display: flex;
+    position: relative;
+    font-family: 'Poppin-Bold';
+    font-size: 1rem;
+    top: 5.5%;
+    left: 42%;
+    letter-spacing: 2px;
+    width: 0%;
+}

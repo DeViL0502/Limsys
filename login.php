@@ -91,25 +91,27 @@
 </head>
 <link rel="stylesheet" href="login_pg.css">
 <body>
-    <div class="box">
-        <h1 id="head">Login</h1>
-        <form action="" name="LogForm" method="POST">
-            <label for="username">Member Id</label><br>
-            <input type="number" name="username" id="username" required><br>
-            <label for="pass">Password</label><br>
-            <input type="password" name="pass" id="pass" required>
-            <input type="submit" value="LOGIN" id="button1">
-        </form>
-        <h1 id="or">OR</h1>
-        <h1 id="not">Not a Member?</h1>
-        <a href="register.php" style="text-decoration: none;">
-            <div>
-                <h1 id="button2">REGISTER</h1>
+    <div class="outer">
+        <div class="inner-box">
+            <div class="image-box">
+                <img src="login_sticker.jpg" alt="" class="logo">
             </div>
-        </a>
-        <a href="forgot.php" style="text-decoration: none;">
-            <h2 id="forgot">Forgot Password?</h2>
-        </a>
+            <div class="box">
+                <h1 id="head">Login</h1>
+                <form action="" name="LogForm" method="POST">
+                    <label for="username">Member Id</label><br>
+                    <input type="number" name="username" id="username" required><br>
+                    <label for="pass">Password</label><br>
+                    <input type="password" name="pass" id="pass" required>
+                    <input type="submit" value="LOGIN" id="button1">
+                </form>
+                <a href="forgot.php" style="text-decoration: none;">
+                    <h2 id="forgot">Forgot Password?</h2>
+                </a>
+                <p class="existing">Not an existing user?</p>
+                <a href="reg_student.html" class="reg_btn">Register</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
