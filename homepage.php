@@ -49,89 +49,89 @@ else{
     <title>Homepage</title>
 </head>
 <link rel="stylesheet" href="homepage.css">
+<link rel="stylesheet" href="universal.css">
 <body>
-    <img src="login_bg.jpg" alt="background_image" id="bg">
-    <header>
-        <div id="cd-logo">
-            <img src="ic_logo2.svg" alt="Logo" width="45" height="45" />
-        </div>
-        <div id="name">
-            <h1>Limsys Library</h1>
-        </div>
-        <div class="home">
-            <a href="homepage.php" style="text-decoration: none;color:white;">
-                <p>HOME</p>
-            </a>
-            <a href="profile.php" style="text-decoration: none;">
-                <div class="profile">
-                    <p>PROFILE</p>
-                </div>
-            </a>
-            <a href="history.php">
-                <div class="history">
-                    <p>HISTORY</p>
-                </div>
-            </a>
-            <a href=<?php echo "$b"?>>
-                <div class="book">
-                    <p>BOOKS</p>
-                </div>
-            </a>
-            <a href="index.php">
-                <div class="logout">
-                    <p>LOGOUT</p>
-                </div>
-            </a>
-        </div>
-        <a href="about.php">
-            <div class="about">
-                <p>ABOUT</p>
+    <div class="navbar">
+        <div class="nav1">
+            <img src="limsys_logo.png" alt="" class="limsys_logo">
+            <h1 class="nav-name">Limsys</h1>
+            <input type="text" placeholder="Search" class="search-bar">
+            <div class="search-btn">
+                <img src="search-icon.png" alt="" class="search-icon">
             </div>
-        </a>
-        <a href="contact_us.php">
-            <div class="contact_us">
-                <p>CONTACT US</p>
-            </div>
-        </a>
-        <form action="" method="POST">
-            <input type="text" placeholder="Search Books..." name="book_name" required>
-            <input type="image" src="search.png" alt="Submit">
-        </form>
-        <div class="box">
-            <h1 id="head">Most Issued Books</h1>
-            <img src="line.png" id="line">
-            <img src="data_analytics.jpg" alt="data_analytics" id="b1">
-            <img src="operating_systems_sem6.jpg" alt="data_analytics" id="b2">
-            <img src="web_technologies_sem6.jpg" alt="data_analytics" id="b3">
-            <img src="software_testing.jpg" alt="data_analytics" id="b4"> 
-            <button id="data_analytics" onclick="da()">Request</button>
-            <button id="operating_systems" onclick="os()">Request</button>
-            <button id="web_technologies" onclick="wt()">Request</button>
-            <button id="software_testing" onclick="st()">Request</button>
-            <script>
-                function da(){
-                    if(confirm("Confirm want to issue book")==true){
-                        location.replace("data_analytics.php");
-                    }
-                }
-                function os(){
-                    if(confirm("Confirm want to issue book")==true){
-                        location.replace("operating_systems_sem6.php");
-                    }
-                }
-                function wt(){
-                    if(confirm("Confirm want to issue book")==true){
-                        location.replace("web_technologies_sem6.php");
-                    }
-                }
-                function st(){
-                    if(confirm("Confirm want to issue book")==true){
-                        location.replace("software_testing.php");
-                    }
-                }
-                
-            </script>
         </div>
-    </header>
+        <div class="nav2">
+            <div class="nav-tabs">
+                <a class="tab" href="homepage.php">HOME</a>
+                <a class="tab" href="profile.php">PROFILE</a>
+                <a class="tab" href="books.php">ISSUED</a>
+                <a class="tab" href="history.php">HISTORY</a>
+                <a class="tab" href="about.php">ABOUT</a>
+            </div>
+        </div>
+    </div>
+    <div class="mid-box">
+        <img src="homepage-image.jpg" alt="" class="homepage-img">
+        <p class="quote">The library is the temple of learning, and learning has liberated more people than all the wars in history.</p>
+    </div>
+    <div class="head-box">
+        <p class="category-head">Books Category</p>
+    </div>
+    <div class="category-box">
+        <div class="branch-box">
+            <img src="comp.png" alt="" class="branch-img">
+            <p class="branch-text">Computer</p>
+        </div>
+        <div class="branch-box">
+            <img src="it.jpg" alt="" class="branch-img">
+            <p class="branch-text">IT</p>
+        </div>
+        <div class="branch-box">
+            <img src="extc.png" alt="" class="branch-img">
+            <p class="branch-text">EXTC</p>
+        </div>
+        <div class="branch-box">
+            <img src="mechanical.png" alt="" class="branch-img">
+            <p class="branch-text">Mechanical</p>
+        </div>
+        <div class="branch-box">
+            <img src="civil.jpg" alt="" class="branch-img">
+            <p class="branch-text">Civil</p>
+        </div>
+        <div class="branch-box">
+            <img src="ebook.png" alt="" class="branch-img">
+            <p class="branch-text">Ebooks</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="foo1">
+            <img src="limsys_logo.png" alt="" class="footer_logo">
+            <h1 class="foo-name">Limsys</h1>
+            <div class='social-logo'>
+                <img src="https://www.nicepng.com/png/full/356-3563301_instagram-instagram-circle-icon.png" alt="" class="insta-logo"/>
+                <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="" class="twitter-logo"/>
+                <img src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-transparent-png.png" alt="" class="facebook-logo"/>
+            </div>
+        </div>
+        <div class="foo2">
+            <div class="projectby">
+                <p class="foo2-head">Project By</p>
+                <p class="foo2-item" style="margin-top: 10px;">Deepraj Pagare</p>
+                <p class="foo2-item">Shruti Patil</p>
+                <p class="foo2-item">Swaraj Naralkar</p>
+            </div>
+            <div class="projectby">
+                <p class="foo2-head">Support</p>
+                <p style="margin-top: 10px;"><a href="mailto:dpagare21comp@student.mes.ac.in" class="foo2-item">dpagare21comp@student.mes.ac.in</a></p>
+                <p><a href="mailto:shrutis21comp@student.mes.ac.in" class="foo2-item">shrutis21comp@student.mes.ac.in</a></p>
+                <p><a href="mailto:snaralkar21comp@student.mes.ac.in" class="foo2-item">snaralkar21comp@student.mes.ac.in</a></p>
+            </div>
+            <div class="projectby" style="width: 37%;">
+                <p class="foo2-head">Location</p>
+                <p style="margin-top: 10px;width:90%"><a href="https://goo.gl/maps/568aA67ydMaCWZhr9" class="foo2-item">Dr. K. M. Vasudevan Pillai Campus, Plot No. 10, Sector 16, New Panvel East, Navi Mumbai, Maharashtra 410206</a></p>
+            </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.669434283395!2d73.12548141489991!3d18.990200987137168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e866de88667f%3A0xc1c5d5badc610f5f!2sPillai%20College%20of%20Engineering%2C%20New%20Panvel!5e0!3m2!1sen!2sin!4v1674372496022!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+    </div>
 </body>
 </html> 

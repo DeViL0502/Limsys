@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "Poppin-Bold";
+    src: url(Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: "Poppin-Medium";
+    src: url(Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: "Poppin-Regular";
+    src: url(Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "EBGaramond-Italic";
+    src: url(EBGaramond-MediumItalic.ttf);
+}
+.limsys_logo{
+    width: 70px;
+    position: relative;
+    top: -17%;
+    z-index: 2;
+    left: 10px;
+    padding: 5px;
+}
+.nav1{
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-color: white;
+}
+.nav2{
+    position: relative;
+    width: 100%;
+    background-color: #2fb0e9;
+    height: 60px;
+}
+.nav-name{
+    font-size: 2.8rem;
+    position: relative;
+    font-family: "EBGaramond-Italic";
+    top: 2px;
+    left: 10px;
+}
+.search-bar{
+    position: relative;
+    width: 30%;
+    border-radius: 20px;
+    height: 40px;
+    border: 1px solid;
+    top: 13px;
+    left: 52%;
+    font-size: 20px;
+    padding-left: 15px;
+}
+.search-btn{
+    position: relative;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 60px;
+    background-color: #2fb0e9;
+    height: 40px;
+    left: 740px;
+    top: 13px;
+    border: 1px solid;
+    border-left: 0;
+    cursor: pointer;
+}
+.search-icon{
+    position: relative;
+    width: 40px;
+    top: 3px;
+    left: 6px;
+}
+.nav-tabs{
+    display: flex;
+    margin-left: 33px;
+}
+.tab{
+    margin-right: 30px;
+    font-size: 1.8rem;
+    color: white;
+    font-family: "Poppin-Medium";
+    margin-top: 8px;
+    text-decoration: none;
+}
+.footer{
+    position: relative;
+    width: 100%;
+    background-color: black;
+}
+.footer_logo{
+    width: 70px;
+    position: relative;
+    top: -17%;
+    z-index: 2;
+    left: 10px;
+    padding: 5px;
+}
+.foo1{
+    position: relative;
+    width: 75%;
+    display: flex;
+    top: 12%;
+    left: 100px;
+    padding-top: 15px;
+}
+.foo-name{
+    font-size: 2.8rem;
+    position: relative;
+    font-family: "EBGaramond-Italic";
+    top: 2px;
+    left: 10px;
+    color: white;
+    font-weight: 100;
+}
+.social-logo{
+    text-align: center;
+    margin-top: 1%;
+    display: flex;
+    margin-left: 50%;
+}
+.insta-logo{
+    width:40px;
+    height: 40px;
+    background-color:white;
+    border-radius:50%;
+    border:3px solid white;
+    position:relative;
+    right:10%;
+    cursor: pointer;
+    left: 120px;
+}
+.twitter-logo{
+    width:40px;
+    height: 40px;
+    background-color:white;
+    border-radius:50%;
+    border:3px solid white;
+    cursor: pointer;
+    position: relative;
+    left: 165px;
+}
+.facebook-logo{
+    width:40px;
+    height: 40px;
+    background-color:white;
+    border-radius:50%;
+    position:relative;
+    border:3px solid white;
+    left:220px;
+    cursor: pointer;
+}
+.insta-logo:hover{
+    bottom: 5px;
+}
+.facebook-logo:hover{
+    bottom: 5px;
+}
+.twitter-logo:hover{
+    bottom: 5px;
+}
+.foo2{
+    position: relative;
+    width: 90%;
+    display: flex;
+    top: 20%;
+    left: 132px;
+    justify-content: space-between;
+}
+.projectby{
+    color: white;
+    font-size: 18px;
+    font-family: 'Poppin-Regular';
+    font-weight: 100;
+    line-height: 30px;
+    margin-top: 25px;
+}
+.foo2-head::before{
+    background: #fff;
+    top: 34px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: relative;
+    width: 60px;
+    display: block;
+}
+.foo2-item{
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+.foo2-item:hover{
+    color:#41d33b;
+}
+.map{   
+    border: 0;
+    position: relative;
+    width: 60%;
+    height: 400px;
+    left: 20%;
+    top: 50px;
+    margin-bottom: 100px;
+}

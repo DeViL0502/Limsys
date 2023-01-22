@@ -7,20 +7,66 @@
     <title>About</title>
 </head>
 <link rel="stylesheet" href="about.css">
+<link rel="stylesheet" href="universal.css">
 <body>
-    <h1>About</h1>
-    <p>Limsys is all about library management system in college that makes library work easy for students to get books from library.
+    <div class="navbar">
+        <div class="nav1">
+            <img src="limsys_logo.png" alt="" class="limsys_logo">
+            <h1 class="nav-name">Limsys</h1>
+            <input type="text" placeholder="Search" class="search-bar">
+            <div class="search-btn">
+                <img src="search-icon.png" alt="" class="search-icon">
+            </div>
+        </div>
+        <div class="nav2">
+            <div class="nav-tabs">
+                <a class="tab" href="homepage.php">HOME</a>
+                <a class="tab" href="profile.php">PROFILE</a>
+                <a class="tab" href="books.php">ISSUED</a>
+                <a class="tab" href="history.php">HISTORY</a>
+                <a class="tab" href="about.php">ABOUT</a>
+            </div>
+        </div>
+    </div>
+    <h1 class="about-head">About</h1>
+    <p class="about-text">Limsys is all about library management system in college that makes library work easy for students to get books from library.
     </p>
     <div class="box">
-        <img src="clg_logo.jpg" id="clg_logo">
-        <img src="ic_logo2.svg" id="lib_logo">
-        <h1 id="clg_name">K.V. N. Naik College</h1>
+        <img src="clg_logo.png" id="clg_logo">
+        <img src="limsys_logo.png" id="lib_logo">
+        <h1 id="clg_name">Pillai College Of Engineering, New Panvel</h1>
         <h1 id="lib_name">Library Management Project</h1>
-        <div>
-            <a href="homepage.php" style="text-decoration: none;">
-                <h1 id="button" style="text-decoration: none;">GO TO HOMEPAGE</h1>
-            </a>
+        <img src="pillai_logo.png" alt="" class="pillai_logo">
+    </div>
+    <div class="footer">
+        <div class="foo1">
+            <img src="limsys_logo.png" alt="" class="footer_logo">
+            <h1 class="foo-name">Limsys</h1>
+            <div class='social-logo'>
+                <img src="https://www.nicepng.com/png/full/356-3563301_instagram-instagram-circle-icon.png" alt="" class="insta-logo"/>
+                <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="" class="twitter-logo"/>
+                <img src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-transparent-png.png" alt="" class="facebook-logo"/>
+            </div>
         </div>
+        <div class="foo2">
+            <div class="projectby">
+                <p class="foo2-head">Project By</p>
+                <p class="foo2-item" style="margin-top: 10px;">Deepraj Pagare</p>
+                <p class="foo2-item">Shruti Patil</p>
+                <p class="foo2-item">Swaraj Naralkar</p>
+            </div>
+            <div class="projectby">
+                <p class="foo2-head">Support</p>
+                <p style="margin-top: 10px;"><a href="mailto:dpagare21comp@student.mes.ac.in" class="foo2-item">dpagare21comp@student.mes.ac.in</a></p>
+                <p><a href="mailto:shrutis21comp@student.mes.ac.in" class="foo2-item">shrutis21comp@student.mes.ac.in</a></p>
+                <p><a href="mailto:snaralkar21comp@student.mes.ac.in" class="foo2-item">snaralkar21comp@student.mes.ac.in</a></p>
+            </div>
+            <div class="projectby" style="width: 37%;">
+                <p class="foo2-head">Location</p>
+                <p style="margin-top: 10px;width:90%"><a href="https://goo.gl/maps/568aA67ydMaCWZhr9" class="foo2-item">Dr. K. M. Vasudevan Pillai Campus, Plot No. 10, Sector 16, New Panvel East, Navi Mumbai, Maharashtra 410206</a></p>
+            </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.669434283395!2d73.12548141489991!3d18.990200987137168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e866de88667f%3A0xc1c5d5badc610f5f!2sPillai%20College%20of%20Engineering%2C%20New%20Panvel!5e0!3m2!1sen!2sin!4v1674372496022!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
     </div>
 </body>
 </html>

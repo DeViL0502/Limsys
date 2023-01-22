@@ -23,11 +23,11 @@
     width: 75%;
     height: 75%;
     border-radius: 20px;
-    box-shadow: 4px 4px 20px 2px #888888;;
+    box-shadow: 4px 4px 20px 2px #888888;
     background-color: white;
     position: relative;
     margin: auto;
-    top: 5%;
+    top: 12%;
 }
 .welcome-img{
     float: right;
@@ -109,6 +109,7 @@
     background: bisque;
     text-align: center;
     letter-spacing: 8px;
+    border: 0.5px solid black;
 }  
 .clock-label{
     display: flex;

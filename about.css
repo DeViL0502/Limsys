@@ -18,76 +18,80 @@
     font-family: "poppin_thin";
     src: url(Poppins-Thin.ttf);
 }
-body{
-    margin: 0%;
-    padding: 0%;
-    background-image: url(login_bg.jpg);
-    background-size: cover;
-}
 .box{
     display: flexbox;
     margin: 0%;
     padding: 0%;
     width: 100%;
     height: 345px;
-    background-color: white;
+    background-color: #2fb0e9;
     margin-top: 9.5%;
 }
-h1{
+.about-head{
     font-size: 60px;
-    color: white;
-    margin-left: 79px;
-    margin-top: 70px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    max-width: 440px;
-}
-p{
-    font-size: 30px;
-    color: white;
-    margin-left: 79px;
-    margin-top: 30px;
+    margin-left: 40px;
+    margin-top: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    max-width: 80%;
+    max-width: 440px;
+    text-decoration: underline;
+}
+.about-text{
+    font-size: 30px;
+    margin-left: 40px;
+    margin-top: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 94%;
 }
 #clg_logo{
     position: relative;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 20px;
-    width: 230px;
+    width: 180px;
     bottom: 0%;
-    left: 69px;
+    left: 198px;
+}
+.pillai_logo{
+    position: relative;
+    width: 200px;
+    bottom: 95%;
+    left: 46.5%;
 }
 #lib_logo{
     position: relative;
     margin-top: 20px;
     margin-left: 20px;
-    width: 172px;
-    bottom: 2%;
-    left: 912px;
+    width: 230px;
+    bottom: -2%;
+    left: 923px;
 }
 #clg_name{
     margin: 0%;
     position: relative;
-    font-size: 32px;
+    font-size: 28px;
     color: black;
     top: 9px;
-    left: 75px;
+    right: -7%;
+    text-align: center;
+    font-family: 'poppin_medium';
+    text-decoration: none;
+    width: 400px;
 }
-#lib_name{
+#lib_name{ 
     margin: 0%;
     position: relative;
-    font-size: 32px;
+    font-size: 28px;
     color: black;
-    bottom: 28px;
-    left: 1116px;
-    width: 320px;
+    left: 73%;
     text-align: center;
+    font-family: 'poppin_medium';
+    bottom: 22%;
+    width: 300px;
+    text-decoration: none;
 }
 #button{
     width: 30%;
     height: 42px;
-    background-image: url(login_bg.jpg);
-    background-size: cover;
+    background-color: #2fb0e9;
     font-size: 23px;
     font-family: 'poppin_medium';
     border-radius: 35px;

@@ -21,10 +21,10 @@
             <p class="welcome-quote"><img src="https://www.pngall.com/wp-content/uploads/4/Quotation-Symbol-PNG.png" alt="" class="welcome-quote-img1">Libraries store the energy that fuels the imagination. They open up windows to the world and inspire us to explore and achieve, and contribute to improving our quality of life.<img src="https://www.pngall.com/wp-content/uploads/4/Quotation-Symbol-PNG.png" alt="" class="welcome-quote-img2"></p>
             <button class="welcome-btn" onclick="return navigate()">Login / Register</button>
         </div>
-        <div id = "MyClockDisplay" class = "clock"></div>
-        <div class="clock-label">
+        <!-- <div id = "MyClockDisplay" class = "clock"></div> -->
+        <!-- <div class="clock-label">
             <p>Hours</p><p style="margin-left: 40px;">Minutes</p><p style="margin-left: 27px;">Seconds</p>
-        </div> 
+        </div>  -->
         <script>
             function showTime(){  
                 var date = new Date();  

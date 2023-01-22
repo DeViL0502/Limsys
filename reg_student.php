@@ -10,16 +10,15 @@
 
   
 
-  if(isset($_POST["MemberId"])){
-    $member_id=$_POST["MemberId"];
+  if(isset($_POST["CollegeId"])){
+    $member_id=$_POST["CollegeId"];
     $pass=$_POST["Password"];
     $st_name=strtoupper($_POST["StudentName"]);
     $email_id=$_POST["EmailId"];
     $mb=$_POST["MobileNumber"];
     $class=strtoupper($_POST["Class"]);
-    $gender=$_POST["Gender"];
 
-    $sql = "INSERT INTO `student_data`(`member_id`, `password`, `name`, `email_id`, `mobile_number`, `class`, `gender`) VALUES ($member_id,\"$pass\",\"$st_name\",\"$email_id\",\"$mb\",\"$class\",\"$gender\");";
+    $sql = "INSERT INTO `student_data`(`member_id`, `password`, `name`, `email_id`, `mobile_number`, `class`, `gender`) VALUES ($member_id,\"$pass\",\"$st_name\",\"$email_id\",\"$mb\",\"$class\");";
     $sql2= "SELECT member_id FROM faculty_data WHERE member_id=$member_id;";
     $st_id=$conn->query($sql2);
     $result=$st_id->fetch_assoc();
@@ -98,10 +97,6 @@
         alert("Enter Class");
         return false;
       }
-      if (Gender == ""){
-        alert("Enter Gender");
-        return false;
-      }
       else{
         return true;
       }
@@ -113,8 +108,8 @@
     <div class="box">
         <h1 id="head">Register</h1>
         <form name="RegForm" action="" onsubmit="return validateForm()" method="post">
-            <label for="username" id="ci">Member Id</label><br>
-            <input type="number" name="MemberId" id="username" ><br>
+            <label for="username" id="ci">Admission Number</label><br>
+            <input type="number" name="CollegeId" id="username"><br>
             <label for="pass" id="ps">Password</label><br>
             <input type="password" name="Password" id="pass">
             <label for="name" id="sn">Student Name</label><br>
@@ -125,13 +120,13 @@
             <input type="text" name="MobileNumber" id="m_number" ><br>
             <label for="class" id="cs">Class</label><br>
             <input type="text" name="Class" id="class" placeholder="FY-B"><br>
-            <label id="gender">Gender</label>
+            <!-- <label id="gender">Gender</label>
             <input type="radio" id="male" name="Gender" value="MALE" >
             <label for="male" id="m">MALE</label>
             <input type="radio" id="female" name="Gender" value="FEMALE">
             <label for="female" id="f">FEMALE</label>
             <input type="radio" id="other" name="Gender" value="OTHER">
-            <label for="other" id="o">OTHER</label>
+            <label for="other" id="o">OTHER</label> -->
             <input type="submit" value="REGISTER" id="button2">
         </form>
     </div>

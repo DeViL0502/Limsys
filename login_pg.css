@@ -18,6 +18,10 @@
     font-family: "poppin_thin";
     src: url(Poppins-Thin.ttf);
 }
+@keyframes slide {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0%);}
+}
 .outer{
     background-color: #c1edfe;
     width: 100vw;
@@ -27,7 +31,7 @@
     width: 68%;
     height: 75%;
     border-radius: 20px;
-    box-shadow: 4px 4px 20px 2px #888888;;
+    box-shadow: 4px 4px 20px 2px #888888;
     background-color: white;
     position: relative;
     margin: auto;
@@ -38,14 +42,13 @@
     margin: 0%;
     padding: 0%;
     width: 510px;
-    background-color: antiquewhite;
+    background-color: #ffe8cd;
     position: relative;
-    left: 51%;
     top: 0px;
-    border-left: 2px solid;
     height: 100%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    z-index: 1;
 }
 #head{
     font-family: 'poppin_bold';
@@ -64,7 +67,7 @@
     border-radius: 10px;
     position: relative;
     text-align: center;
-    top: 120px;
+    top: 90px;
     left: 52px;
     color: black;
     background: #c1edfe;
@@ -97,10 +100,10 @@ input[id=username]{
     border-bottom: 2px solid #333333;
     outline: none;
     font-size: 20px;
-    top: 63px;
+    top: 26px;
     left: 24px;
     font-family: 'poppin_medium';
-    background-color: antiquewhite;
+    background-color: #ffe8cd;
 }
 input[id=pass]{
     position: relative;
@@ -111,10 +114,10 @@ input[id=pass]{
     border-bottom: 2px solid #333333;
     outline: none;
     font-size: 20px;
-    top: 63px;
+    top: 26px;
     left: 24px;
     font-family: 'poppin_medium';
-    background-color: antiquewhite;
+    background-color: #ffe8cd;
 }
 input[id=username]:focus{
     border-bottom: 2px solid cyan;
@@ -124,7 +127,7 @@ input[id=pass]:focus{
 }
 label{
     position: relative;
-    top: 76px;
+    top: 40px;
     margin: 50px;
     color: #333333;
     font-family: 'poppin_regular';
@@ -135,7 +138,7 @@ label{
     font-size: 18px;
     position: absolute;
     left: 35%;
-    bottom: 180px;
+    bottom: 160px;
     color: black;
 }
 #forgot:hover{
@@ -146,7 +149,7 @@ label{
     font-size: 17px;
     position: relative;
     left: 27%;
-    top: 26%;
+    top: 20%;
     color: black;
 }
 .reg_btn{
@@ -154,7 +157,7 @@ label{
     font-size: 17px;
     position: relative;
     left: 63%;
-    top: 114px;
+    top: 82px;
     color: black;
     text-decoration: none;
 }
@@ -165,8 +168,157 @@ label{
     width: 400px;
     position: relative;
     top: 10%;
-    left: 70px;
+    left: -6%;
+    z-index: 0;
 }
 .image-box{
-    width: 0%;
+    width: 53%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 2px solid;
+    z-index: 2;
+    background: white;
+}
+.limsys_logo{
+    width: 100px;
+    position: relative;
+    top: -17%;
+    z-index: 2;
+    left: 130px;
+}
+.username_logo{
+    width: 40px;
+    position: relative;
+    top: 20.5%;
+    left: 46px;
+    z-index: 2;
+}
+.pass_logo{
+    width: 30px;
+    position: relative;
+    top: 39.5%;
+    left: 10px;
+    z-index: 2;
+}
+.social-logo{
+    text-align: center;
+    margin-top: 17%;
+    display: flex;
+}
+.insta-logo{
+    width:60px;
+    background-color:white;
+    border-radius:50%;
+    border:4px solid white;
+    position:relative;
+    right:10%;
+    cursor: pointer;
+    left: 120px;
+    box-shadow: 1px 1px 6px 2px grey;
+}
+.twitter-logo{
+    width:60px;
+    background-color:white;
+    border-radius:50%;
+    border:4px solid white;
+    cursor: pointer;
+    position: relative;
+    left: 165px;
+    box-shadow: 1px 1px 6px 2px grey
+}
+.facebook-logo{
+    width:60px;
+    background-color:white;
+    border-radius:50%;
+    position:relative;
+    border:4px solid white;
+    left:220px;
+    cursor: pointer;
+    box-shadow: 1px 1px 6px 2px grey
+}
+.insta-logo:hover{
+    bottom: 10px;
+    box-shadow: 0px 10px 10px #2a2a2a;
+}
+.facebook-logo:hover{
+    bottom: 10px;
+    box-shadow: 0px 10px 10px #2a2a2a;
+}
+.twitter-logo:hover{
+    bottom: 10px;
+    box-shadow: 0px 10px 10px #2a2a2a;
+}
+.forgot-box{
+    margin: 0%;
+    padding: 0%;
+    width: 510px;
+    background-color: #ffe8cd;
+    position: relative;
+    top: 0px;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 1;
+}
+
+
+#button2{
+    width: 80%;
+    height: 42px;
+    font-size: 23px;
+    font-family: 'poppin_medium';
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    top: 90px;
+    left: 52px;
+    color: black;
+    background: #c1edfe;
+    cursor: pointer;
+}
+#button2:hover{
+    background-color: bisque;
+}
+input[id=mnum]{
+    position: relative;
+    width: 80%;
+    margin: 25px;
+    border: none;
+    border-bottom: 2px solid #333333;
+    outline: none;
+    font-size: 20px;
+    top: 62px;
+    left: 24px;
+    font-family: 'poppin_medium';
+    background-color: #ffe8cd;
+}
+input[id=mnum]:focus{
+    border-bottom: 2px solid cyan;
+}
+.no{
+    position: relative;
+    top: 80px;
+    color: #333333;
+    font-family: 'poppin_regular';
+    font-weight: bold;
+}
+.forgot-existing{
+    font-family: 'poppin_medium';
+    font-size: 17px;
+    position: relative;
+    left: 22%;
+    top: 20%;
+    color: black;
+}
+.for_btn{
+    font-family: 'poppin_medium';
+    font-size: 17px;
+    position: relative;
+    left: 65%;
+    top: 82px;
+    color: black;
+    text-decoration: none;
+}
+.for_btn:hover{
+    color: chocolate;
 }

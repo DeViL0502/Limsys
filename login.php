@@ -4,10 +4,13 @@
 	$password = "";
 	$database="limsys";
 	
-	// Create connection
 	$conn = new mysqli($servername, $username, $password,$database);
     session_start();
 
+    $display="none";
+    $loginDisplay="block";
+    $animationLogin="none";
+    $animationForgot="none";
 	$sql1="select member_id from student_data;";
 	$result1=$conn->query($sql1);
     $sql2="select password from student_data;";
@@ -75,7 +78,22 @@
         }
         else
         echo "<script> alert('Member Id Not Registered!!') </script>";
-
+    }
+    function showForgotPage(){
+        $GLOBALS['display']="block";
+        $GLOBALS['loginDisplay']="none";
+        $GLOBALS['animationForgot']="slide 0.5s";
+    }
+    function showLoginPage(){
+        $GLOBALS['display']="none";
+        $GLOBALS['loginDisplay']="block";
+        $GLOBALS['animationLogin']="slide 0.5s";
+    }
+    if (isset($_GET['forgot'])) {
+        showForgotPage();
+    }
+    if (isset($_GET['login'])) {
+        showLoginPage();
     }
 ?>
 <!DOCTYPE html>
@@ -85,19 +103,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <script>
-        
-    </script>
 </head>
 <link rel="stylesheet" href="login_pg.css">
 <body>
     <div class="outer">
         <div class="inner-box">
             <div class="image-box">
+                <img src="limsys_logo.png" alt="" class="limsys_logo">
                 <img src="login_sticker.jpg" alt="" class="logo">
+                <div class='social-logo'>
+                <img src="https://www.nicepng.com/png/full/356-3563301_instagram-instagram-circle-icon.png" alt="" class="insta-logo"/>
+                <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="" class="twitter-logo"/>
+                <img src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-transparent-png.png" alt="" class="facebook-logo"/>
             </div>
-            <div class="box">
+            </div>
+            <div class="box" style="display: <?php echo $loginDisplay ?>;animation: <?php echo $animationLogin ?>">
                 <h1 id="head">Login</h1>
+                    <img src="username_logo.png" alt="" class="username_logo">
+                    <img src="pass_logo.png" alt="" class="pass_logo">
                 <form action="" name="LogForm" method="POST">
                     <label for="username">Member Id</label><br>
                     <input type="number" name="username" id="username" required><br>
@@ -105,11 +128,21 @@
                     <input type="password" name="pass" id="pass" required>
                     <input type="submit" value="LOGIN" id="button1">
                 </form>
-                <a href="forgot.php" style="text-decoration: none;">
+                <a href='login.php?forgot' style="text-decoration: none;">
                     <h2 id="forgot">Forgot Password?</h2>
                 </a>
                 <p class="existing">Not an existing user?</p>
-                <a href="reg_student.html" class="reg_btn">Register</a>
+                <a href="reg_student.php" class="reg_btn">Register</a>
+            </div>
+            <div class="forgot-box" style="display: <?php echo $display ?>;animation: <?php echo $animationForgot ?>">
+                <h1 id="head">Forgot Password</h1>
+                <form action="" name="ForgotForm" method="POST">
+                    <label for="mnum" class="no">Mobile Number</label><br>
+                    <input type="number" name="mnum" id="mnum" required><br>
+                    <input type="submit" value="Send OTP" id="button2">
+                </form>
+                <p class="forgot-existing">Already an existing user?</p>
+                <a href="login.php?login" class="for_btn">Login</a>
             </div>
         </div>
     </div>
