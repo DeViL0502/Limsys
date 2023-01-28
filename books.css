@@ -21,86 +21,79 @@
 body{
     margin: 0%;
     padding: 0%;
-    background-image: url(login_bg.jpg);
-    background-size: cover;
+    background-color: antiquewhite;
 }
 .box{
-    margin: 0%;
+    margin: auto;
     padding: 0%;
     width: 1286px;
     height: max-content;
     background-color: white;
     position: relative;
-    left: 8%;
-    top: 90px;
+    top: 60px;
     padding-bottom: 3%;
-    border: 2px solid black;
     margin-bottom: 10%;
+    box-shadow: 4px 4px 20px 2px #888888;
+    border-radius: 20px;
 }
 .box h1{
-    padding-top: 10px;
+    padding-top: 20px;
     text-align: center;
-    font-family:'poppin_medium';
-    font-size: 32px;
-    text-decoration: underline;
+    font-family:'poppin_bold';
+    font-size: 30px;
 }
 .box1{
     display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 20px;
+    margin-bottom: -30px;
 }
-.box1 h3{
-    padding: 35px 293px 0px 0px;
+.bn{
     font-family: 'poppin_medium';
     font-size: 27px;
     text-decoration: underline;
-    flex-direction: row;
-    position: relative;
-    left: 238px;
-    margin-left: -5%;
 }
-.box2{
-    position: absolute;
-    width: 1014px;
-    height: 253px;
-    top: 146px;
-    left: 129px;
-    background-color: white;
-    border: 3px solid black;
-}
-#bn{
-    font-family: 'poppin_regular';
-    font-size: 25px;
-    display: inline-block;
-    position: relative;
-    padding-left: 173px;
-    padding-top: 30px;
-    width: 260px;
-}
-#rd{
-    font-family: 'poppin_regular';
-    font-size: 25px;
-    display: inline-block;
-    padding-left: 311px;
-    position: relative;
-}
-#isd{
-    font-family: 'poppin_regular';
-    font-size: 25px;
-    display: inline-block;
-    padding-left: 143px;
-    position: relative;
-}
-#button{
-    width: 30%;
-    height: 42px;
-    background-image: url(login_bg.jpg);
-    background-size: cover;
-    font-size: 23px;
+.isd{
     font-family: 'poppin_medium';
-    border-radius: 35px;
-    color: white;
+    font-size: 27px;
+    text-decoration: underline;
+}
+.rtd{
+    font-family: 'poppin_medium';
+    font-size: 27px;
+    text-decoration: underline;
+}
+.books-data{
+    width: 100%;
     position: relative;
-    text-align: center;
-    margin-left: 36%;
-    margin-bottom: 0%;
-    margin-top: 2%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.data{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.bookName{
+    font-family: "Poppin_Regular";
+    font-size: 1.3rem;
+    width: 400px;
+    position: relative;
+    left: 7.8%;
+}
+.issueDate{
+    font-family: "Poppin_Regular";
+    font-size: 1.3rem;
+    position: relative;
+    right: 12.5%;
+}
+.returnDate{
+    font-family: "Poppin_Regular";
+    font-size: 1.3rem;
+    position: relative;
+    right: 10.5%;
 }

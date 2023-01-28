@@ -18,6 +18,10 @@
     font-family: "EBGaramond-Italic";
     src: url(EBGaramond-MediumItalic.ttf);
 }
+@keyframes slideDown {
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(0%);}
+}
 .homepage-img{
     position: relative;
     width: 40%;
@@ -72,6 +76,10 @@
     top: 80px;
     box-shadow: 2px 2px 15px 2px black;
 }
+a{
+    text-decoration: none;
+    color:black
+}
 .branch-text{
     position: relative;
     font-size: 1.5rem;
@@ -86,4 +94,80 @@
     border-top-right-radius: 15px;
     height: 160px;
     border-bottom: 2px solid;
+}
+.popup{
+    position: relative;
+    width: 900px;
+    height: 450px;
+    background-color: white;
+    border-radius: 20px;
+    top: 470px;
+    z-index: 10;
+    margin: auto;
+    margin-top: -29.5%;
+    border: 1.5px solid;
+    animation: slideDown 0.5s;
+    display: flex;
+}
+.popup-book-img{
+    position: relative;
+    top: 0px;
+    width: 60%;
+    height: 450px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.popup-innerBox{
+    width: 100%;
+    border-left: 2px solid;
+}
+.popup-cross{
+    width: 40px;
+    position: relative;
+    top: 10px;
+    left: 91%;
+    z-index: 3;
+    cursor: pointer;
+}
+.popup-head{
+    position: relative;
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Poppin-medium";
+    margin-top: -30px;
+    color: red;
+}
+.popup-name{
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.5rem;
+    text-align: left;
+    font-family: "Poppin-regular";
+    top: 20px;
+}
+.popup-author{
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.5rem;
+    text-align: left;
+    font-family: "Poppin-regular";
+    top: 20px;
+    color: dimgray;
+}
+.popup-fine{
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.5rem;
+    text-align: left;
+    font-family: "Poppin-regular";
+    top: 40px;
+}
+.popup-text{
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.2rem;
+    text-align: left;
+    font-family: 'Poppin-Medium';
+    top: 60px;
+    width: 91%;
 }

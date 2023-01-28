@@ -21,29 +21,34 @@
 body{
     margin: 0%;
     padding: 0%;
-    background-image: url(login_bg.jpg);
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: antiquewhite;
+    overflow-x: hidden;
 }
 .box{
-    margin: 0%;
+    margin: auto;
     padding: 3%;
     padding-left: 20px;
-    width: 1286px;
-    height: max-content;
+    width: 1180px;
+    height: 600px;
     background-color: white;
     position: relative;
-    left: 8%;
-    top: 90px;
-    border: 2px solid black;
+    top: 60px;
     margin-bottom: 10%;
+    box-shadow: 4px 4px 20px 2px #888888;
+    border-radius: 20px;
+    padding-top: 20px;
+}
+#data{
+    height: 470px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-top: 50px;
+
 }
 .box h1{
-    padding-top: 10px;
     text-align: center;
-    font-family:'poppin_medium';
+    font-family:'poppin_bold';
     font-size: 32px;
-    text-decoration: underline;
 }
 #head{
     margin-left: 5%;
@@ -51,61 +56,34 @@ body{
     display: flex;
     flex-direction: row;
     text-align: left;
+    margin-bottom: -20px;
 }
 #head p{
-    padding-right: 29%;
-    width: 752px;
+    width: 828px;
     font-size: 28px;
     font-family: 'poppin_medium';
     padding-top: 20px;
     text-decoration: underline;
-    left: 131px;
+    left: 50px;
     position: relative;
+    font-weight: 700;
 }
 #id{
     white-space: nowrap;
 }
 #bn{
-    font-family: 'poppin_regular';
+    font-family: 'Poppin-Medium';
     font-size: 25px;
     display: inline-block;
     position: relative;
-    padding-left: 194px;
-    padding-top: 30px;
-    width: 300px;
+    padding-left: 108px;
+    padding-bottom: 30px;
+    width: 390px;
 }
 #rd{
-    font-family: 'poppin_regular';
+    font-family: 'Poppin-Medium';
     font-size: 25px;
     display: inline-block;
     padding-left: 481px;
-    position: relative;
-}
-#button{
-    width: 30%;
-    height: 42px;
-    background-image: url(login_bg.jpg);
-    background-size: cover;
-    border-radius: 35px;
-    padding-bottom: 8px;
-    margin-left: 36%;
-    margin-top: 36px;
-    position: relative;
-}
-#button:hover{
-    width: 30.5%;
-    height: 44px;
-    background-image: url(login_bg.jpg);
-    background-size: cover;
-    border-radius: 35px;
-    padding-bottom: 8px;
-    margin-left: 35.8%;
-    margin-top: 35px;
-    position: relative;
-}
-#btn_text{
-    font-size: 26px;
-    font-family: 'poppin_medium';
-    color: white;
     position: relative;
 }

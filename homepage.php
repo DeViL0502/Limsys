@@ -16,28 +16,11 @@ $num=0;
 $ret5=$conn->query("select return_date,book_name from return_data where member_id=$member_id");
 $r5=$ret5->fetch_all();
 
-if(isset($_POST["book_name"])){
-    $book_name=$_POST["book_name"];
+if(isset($_POST["search"])){
+    $book_name=$_POST["search"];
     $add = "INSERT INTO `search_data`(`member_id`, `book_name`, `date`) VALUES ($member_id,\"$book_name\",\"$date\");";
     $conn->query($add);
     echo "<script> location.replace('search_pg.php') </script>";
-}
-
-if($type==1)
-{
-    $sql=$conn->query("select books_issued from student_data where member_id=$member_id");
-    $books_issued=$sql->fetch_all();
-}
-else
-{
-    $sql=$conn->query("select books_issued from faculty_data where member_id=$member_id");
-    $books_issued=$sql->fetch_all();
-}
-if($books_issued[0][0]==0){
-    $b="books_norecord.php";
-}
-else{
-    $b="books.php";
 }
 ?>
 <!DOCTYPE html>
@@ -47,22 +30,47 @@ else{
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <script>
+        function search(){
+            alert("searched");
+        }
+        function popupClose(){
+            document.getElementById("popup").style.display="none";
+        }
+    </script>
 </head>
 <link rel="stylesheet" href="homepage.css">
 <link rel="stylesheet" href="universal.css">
 <body>
+    <div class="popup" id="popup">
+        <img src="operating_systems_sem6.jpg" alt="" class="popup-book-img">
+        <div class="popup-innerBox">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flat_cross_icon.svg/1024px-Flat_cross_icon.svg.png" alt="" class="popup-cross"  onclick="return popupClose()">
+            <h1 class="popup-head">Return Date Expired</h1>
+            <?php
+                echo "<h3 class='popup-name'>".$r5[0][1]."</h3>";
+            ?>
+            <h3 class="popup-author">Operating Systems</h3>
+            <h3 class="popup-fine">Fine: ₹36</h3>
+            <p class="popup-text">You have to pay fine for late return. If not paid cannot issue another book. </p>
+        </div>
+    </div>
     <div class="navbar">
         <div class="nav1">
             <img src="limsys_logo.png" alt="" class="limsys_logo">
             <h1 class="nav-name">Limsys</h1>
-            <input type="text" placeholder="Search" class="search-bar">
-            <div class="search-btn">
-                <img src="search-icon.png" alt="" class="search-icon">
-            </div>
+            <form action="" method="POST" name="searchInput">
+                <input type="text" placeholder="Search" class="search-bar" name="search" id="search">
+                <button class="form-button">
+                    <div class="search-btn">
+                        <img src="search-icon.png" alt="" class="search-icon">
+                    </div>
+                </button>
+            </form>
         </div>
         <div class="nav2">
             <div class="nav-tabs">
-                <a class="tab" href="homepage.php">HOME</a>
+                <a class="tab" href="homepage.php" style="color: black;font-weight:600">HOME</a>
                 <a class="tab" href="profile.php">PROFILE</a>
                 <a class="tab" href="books.php">ISSUED</a>
                 <a class="tab" href="history.php">HISTORY</a>
@@ -78,10 +86,10 @@ else{
         <p class="category-head">Books Category</p>
     </div>
     <div class="category-box">
-        <div class="branch-box">
+        <a href="loading_page.php"><div class="branch-box">
             <img src="comp.png" alt="" class="branch-img">
             <p class="branch-text">Computer</p>
-        </div>
+        </div></a>
         <div class="branch-box">
             <img src="it.jpg" alt="" class="branch-img">
             <p class="branch-text">IT</p>
@@ -108,9 +116,9 @@ else{
             <img src="limsys_logo.png" alt="" class="footer_logo">
             <h1 class="foo-name">Limsys</h1>
             <div class='social-logo'>
-                <img src="https://www.nicepng.com/png/full/356-3563301_instagram-instagram-circle-icon.png" alt="" class="insta-logo"/>
-                <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="" class="twitter-logo"/>
-                <img src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-transparent-png.png" alt="" class="facebook-logo"/>
+                <a href="https://www.instagram.com/pillaiscollege/"><img src="https://www.nicepng.com/png/full/356-3563301_instagram-instagram-circle-icon.png" alt="" class="insta-logo"/></a>
+                <a href="https://twitter.com/pillaiscollege"><img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="" class="twitter-logo"/></a>
+                <a href="https://www.facebook.com/pillaicollege"><img src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-transparent-png.png" alt="" class="facebook-logo"/></a>
             </div>
         </div>
         <div class="foo2">

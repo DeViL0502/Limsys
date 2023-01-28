@@ -95,6 +95,14 @@
     if (isset($_GET['login'])) {
         showLoginPage();
     }
+    if(isset($_POST['mnum'])){
+        $to="pagaredeepraj05@gmail.com";
+        $subject="Test";
+        $message="Hello";
+        $from="pagaredeepraj05@gmail.com";
+        $header="From: $from";
+        mail($to,$subject,$message,$header);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

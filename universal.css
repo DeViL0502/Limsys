@@ -43,14 +43,20 @@
 }
 .search-bar{
     position: relative;
-    width: 30%;
+    width: 500px;
     border-radius: 20px;
     height: 40px;
     border: 1px solid;
-    top: 13px;
-    left: 52%;
+    top: 8px;
+    left: 128%;
     font-size: 20px;
     padding-left: 15px;
+}
+.search-bar:focus{
+    outline: none;
+}
+.form-button{
+    border: none;
 }
 .search-btn{
     position: relative;
@@ -59,8 +65,8 @@
     width: 60px;
     background-color: #2fb0e9;
     height: 40px;
-    left: 740px;
-    top: 13px;
+    left: 681px;
+    top: 13.5px;
     border: 1px solid;
     border-left: 0;
     cursor: pointer;
@@ -69,7 +75,7 @@
     position: relative;
     width: 40px;
     top: 3px;
-    left: 6px;
+    left: 0px;
 }
 .nav-tabs{
     display: flex;

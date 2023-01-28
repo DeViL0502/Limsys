@@ -13,10 +13,14 @@
         <div class="nav1">
             <img src="limsys_logo.png" alt="" class="limsys_logo">
             <h1 class="nav-name">Limsys</h1>
-            <input type="text" placeholder="Search" class="search-bar">
-            <div class="search-btn">
-                <img src="search-icon.png" alt="" class="search-icon">
-            </div>
+            <form action="" method="POST" name="searchInput">
+                <input type="text" placeholder="Search" class="search-bar" name="search" id="search">
+                <button class="form-button">
+                    <div class="search-btn">
+                        <img src="search-icon.png" alt="" class="search-icon">
+                    </div>
+                </button>
+            </form>
         </div>
         <div class="nav2">
             <div class="nav-tabs">
@@ -24,7 +28,7 @@
                 <a class="tab" href="profile.php">PROFILE</a>
                 <a class="tab" href="books.php">ISSUED</a>
                 <a class="tab" href="history.php">HISTORY</a>
-                <a class="tab" href="about.php">ABOUT</a>
+                <a class="tab" href="about.php" style="color: black;font-weight:600">ABOUT</a>
             </div>
         </div>
     </div>
@@ -43,9 +47,9 @@
             <img src="limsys_logo.png" alt="" class="footer_logo">
             <h1 class="foo-name">Limsys</h1>
             <div class='social-logo'>
-                <img src="https://www.nicepng.com/png/full/356-3563301_instagram-instagram-circle-icon.png" alt="" class="insta-logo"/>
-                <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="" class="twitter-logo"/>
-                <img src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-transparent-png.png" alt="" class="facebook-logo"/>
+                <a href="https://www.instagram.com/pillaiscollege/"><img src="https://www.nicepng.com/png/full/356-3563301_instagram-instagram-circle-icon.png" alt="" class="insta-logo"/></a>
+                <a href="https://twitter.com/pillaiscollege"><img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="" class="twitter-logo"/></a>
+                <a href="https://www.facebook.com/pillaicollege"><img src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-transparent-png.png" alt="" class="facebook-logo"/></a>
             </div>
         </div>
         <div class="foo2">

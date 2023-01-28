@@ -1,0 +1,97 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+@font-face {
+    font-family: "poppin_regular";
+    src: url(Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "poppin_medium";
+    src: url(Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: "poppin_bold";
+    src: url(Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: "poppin_thin";
+    src: url(Poppins-Thin.ttf);
+}
+.main-box{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.head-text{
+    font-family: 'Poppin-Medium';
+    text-decoration: underline;
+    word-spacing: 5px;
+}
+.sem1{
+    width: 98%;
+    margin: auto;
+    padding-left: 20px;
+}
+.sem1-head{
+    text-align: left;
+    font-family: 'Poppin-Medium';
+    font-size: 1.8rem;
+    margin-left: 10px;
+    border-bottom: 3.5px solid;
+    width: 99%;
+}
+.sem1-card{
+  display: flex;
+  overflow-x: scroll;
+  margin-top: -20px;
+}
+.book-card{  
+    display: block;
+    text-align: left;
+    line-height: 15px;
+    box-shadow: 0px 0px 15px 5px darkgray;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    height: 450px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.book-card:hover{
+    bottom: 10px;
+    box-shadow: 0px 2px 15px 2px #686868;
+}
+.card-img{
+    width: 270px;
+    height: 330px;
+    border-radius: 10px;
+}
+.book-name{
+    font-size: 1.1rem;
+    font-family: "Poppin-Medium";
+    line-height: 25px;
+}
+.author-name{
+    font-size: 1rem;
+    font-family: "Poppin-Regular";
+    color: dimgray;
+    margin-top: -5px;
+}
+.counter-icon{
+    width: 50px;
+    position: relative;
+    bottom: 20px;
+    right: 15px;
+}
+.counter-number{
+    position: relative;
+    bottom: 63px;
+    left: 25px;
+    font-family: 'Poppin-Medium';
+    font-weight: 700;
+    color: #585858;
+    letter-spacing: 1px;
+}
