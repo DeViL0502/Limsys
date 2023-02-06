@@ -4,22 +4,40 @@ $username = "root";
 $password = "";
 $database="limsys";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password,$database);
 session_start();
 
 $member_id=$_SESSION["member_id"];
-$type=$_SESSION["type"];
-$date=date("d/m/y");
+$date=date("y-m-d");
 $num=0;
 
-$ret5=$conn->query("select return_date,book_name from return_data where member_id=$member_id");
+$ret5=$conn->query("select return_date,book_name,fine from issue_data where admission_number='$member_id' and return_date<'$date'");
 $r5=$ret5->fetch_all();
+if(count($r5)==0){
+    $display="display:none";
+}
+else{
+    $bookData=$conn->query("select author,img from books_data where book_name='".$r5[0][1]."'");
+    $bd=$bookData->fetch_all();
+    $tf=0;
+    for($i=0;$i<count($r5);$i++){
+        $today_month_name = date("F", mktime(0, 0, 0,(int) substr($date,3,5), 10));
+        $return_month_name = date("F", mktime(0, 0, 0,(int) substr($r5[$i][0],3,5), 10));
+        $diff=((strtotime(''.$today_month_name.' '.substr($date,6,8).', 20'.substr($date,0,2).'')-strtotime(''.$return_month_name.' '.substr($r5[$i][0],6,8).', 20'.substr($r5[$i][0],0,2).''))/86400);
+        $fine="UPDATE issue_data SET fine=".$diff*0.5." WHERE book_name='".$r5[$i][1]."'";
+        $sql=$conn->query($fine);
+       $tf=$tf+($diff*0.5);
+    }
+    $total_fine="UPDATE `student_data` SET `total_fine`=".$tf." WHERE admission_number='".$member_id."';";
+    $conn->query($total_fine);
+    $display="display:flex";
+}
 
 if(isset($_POST["search"])){
     $book_name=$_POST["search"];
-    $add = "INSERT INTO `search_data`(`member_id`, `book_name`, `date`) VALUES ($member_id,\"$book_name\",\"$date\");";
+    $add = "INSERT INTO `search_data`(`admission_number`, `book_name`, `date`) VALUES (\"$member_id\",\"$book_name\",\"$date\");";
     $conn->query($add);
+    $_SESSION['search-name']=$book_name;
     echo "<script> location.replace('search_pg.php') </script>";
 }
 ?>
@@ -31,9 +49,6 @@ if(isset($_POST["search"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <script>
-        function search(){
-            alert("searched");
-        }
         function popupClose(){
             document.getElementById("popup").style.display="none";
         }
@@ -42,16 +57,16 @@ if(isset($_POST["search"])){
 <link rel="stylesheet" href="homepage.css">
 <link rel="stylesheet" href="universal.css">
 <body>
-    <div class="popup" id="popup">
-        <img src="operating_systems_sem6.jpg" alt="" class="popup-book-img">
+    <div class="popup" id="popup" style=<?php echo $display?>>
+        <img src="<?php echo $bd[0][1] ?>.jpg" alt="" class="popup-book-img">
         <div class="popup-innerBox">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flat_cross_icon.svg/1024px-Flat_cross_icon.svg.png" alt="" class="popup-cross"  onclick="return popupClose()">
             <h1 class="popup-head">Return Date Expired</h1>
             <?php
                 echo "<h3 class='popup-name'>".$r5[0][1]."</h3>";
             ?>
-            <h3 class="popup-author">Operating Systems</h3>
-            <h3 class="popup-fine">Fine: ₹36</h3>
+            <h3 class="popup-author"><?php echo $bd[0][0] ?></h3>
+            <h3 class="popup-fine">Fine: ₹<?php echo $r5[0][2] ?></h3>
             <p class="popup-text">You have to pay fine for late return. If not paid cannot issue another book. </p>
         </div>
     </div>
@@ -86,30 +101,30 @@ if(isset($_POST["search"])){
         <p class="category-head">Books Category</p>
     </div>
     <div class="category-box">
-        <a href="loading_page.php"><div class="branch-box">
+        <a href="loading_page.php?name=comp"><div class="branch-box">
             <img src="comp.png" alt="" class="branch-img">
             <p class="branch-text">Computer</p>
         </div></a>
-        <div class="branch-box">
+        <a href="loading_page.php?name=it"><div class="branch-box">
             <img src="it.jpg" alt="" class="branch-img">
             <p class="branch-text">IT</p>
-        </div>
-        <div class="branch-box">
+        </div></a>
+        <a href="loading_page.php?name=extc"><div class="branch-box">
             <img src="extc.png" alt="" class="branch-img">
             <p class="branch-text">EXTC</p>
-        </div>
-        <div class="branch-box">
+        </div></a>
+        <a href="loading_page.php?name=mech"><div class="branch-box">
             <img src="mechanical.png" alt="" class="branch-img">
             <p class="branch-text">Mechanical</p>
-        </div>
-        <div class="branch-box">
+        </div></a>
+        <a href="loading_page.php?name=civil"><div class="branch-box">
             <img src="civil.jpg" alt="" class="branch-img">
             <p class="branch-text">Civil</p>
-        </div>
-        <div class="branch-box">
+        </div></a>
+        <a href="loading_page.php?name=ebook"><div class="branch-box">
             <img src="ebook.png" alt="" class="branch-img">
             <p class="branch-text">Ebooks</p>
-        </div>
+        </div></a>
     </div>
     <div class="footer">
         <div class="foo1">

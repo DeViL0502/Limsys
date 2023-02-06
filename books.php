@@ -9,8 +9,16 @@ $conn = new mysqli($servername, $username, $password,$database);
 session_start();
 
 $member_id=$_SESSION["member_id"];
-$sql=$conn->query("select book_name,issue_date,return_date from return_data where member_id=$member_id");
+$date=date("y-m-d");
+$sql=$conn->query("select book_name,issue_date,return_date from issue_data where admission_number='$member_id'");
 $books_issued=$sql->fetch_all();
+if(isset($_POST["search"])){
+    $book_name=$_POST["search"];
+    $add = "INSERT INTO `search_data`(`admission_number`, `book_name`, `date`) VALUES (\"$member_id\",\"$book_name\",\"$date\");";
+    $conn->query($add);
+    $_SESSION['search-name']=$book_name;
+    echo "<script> location.replace('search_pg.php') </script>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

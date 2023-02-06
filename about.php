@@ -1,3 +1,23 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database="limsys";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password,$database);
+session_start();
+
+$member_id=$_SESSION["member_id"];
+$date=date("y-m-d");
+if(isset($_POST["search"])){
+    $book_name=$_POST["search"];
+    $add = "INSERT INTO `search_data`(`admission_number`, `book_name`, `date`) VALUES (\"$member_id\",\"$book_name\",\"$date\");";
+    $conn->query($add);
+    $_SESSION['search-name']=$book_name;
+    echo "<script> location.replace('search_pg.php') </script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

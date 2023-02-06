@@ -18,14 +18,12 @@
     font-family: "poppin_thin";
     src: url(Poppins-Thin.ttf);
 }
-.main-box{
-    text-align: center;
-    margin-bottom: 70px;
-}
+
 .head-text{
     font-family: 'Poppin-Medium';
-    text-decoration: underline;
     word-spacing: 5px;
+    margin-top: 20px;
+    text-align: center;
 }
 .sem1{
     width: 98%;
@@ -39,17 +37,20 @@
     margin-left: 10px;
     border-bottom: 3.5px solid;
     width: 99%;
+    margin-top: 20px;
 }
 .sem1-card{
   display: flex;
+  overflow: hidden;
   overflow-x: scroll;
-  margin-top: -20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 .book-card{  
     display: block;
     text-align: left;
-    line-height: 15px;
-    box-shadow: 0px 0px 15px 5px darkgray;
+    line-height: 40px;
+    box-shadow: 0px 0px 4px 0px darkgray;
     padding: 10px;
     margin-left: 15px;
     margin-right: 10px;
@@ -61,8 +62,8 @@
     border-radius: 15px;
 }
 .book-card:hover{
-    bottom: 10px;
-    box-shadow: 0px 2px 15px 2px #686868;
+    bottom: 5px;
+    box-shadow: 0px 1px 4px 1px #686868;
 }
 .card-img{
     width: 270px;
@@ -70,12 +71,12 @@
     border-radius: 10px;
 }
 .book-name{
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     font-family: "Poppin-Medium";
     line-height: 25px;
 }
 .author-name{
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: "Poppin-Regular";
     color: dimgray;
     margin-top: -5px;
@@ -83,15 +84,16 @@
 .counter-icon{
     width: 50px;
     position: relative;
-    bottom: 20px;
+    bottom: 17px;
     right: 15px;
 }
 .counter-number{
     position: relative;
-    bottom: 63px;
+    bottom: 69px;
     left: 25px;
     font-family: 'Poppin-Medium';
     font-weight: 700;
     color: #585858;
     letter-spacing: 1px;
+    font-size: 1rem;
 }

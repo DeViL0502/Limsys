@@ -1,4 +1,10 @@
 <?php
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
+    require './PHPMailer/src/Exception.php';
+    require './PHPMailer/src/PHPMailer.php';
+    require './PHPMailer/src/SMTP.php';
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
@@ -11,7 +17,7 @@
     $loginDisplay="block";
     $animationLogin="none";
     $animationForgot="none";
-	$sql1="select member_id from student_data;";
+	$sql1="select admission_number from student_data;";
 	$result1=$conn->query($sql1);
     $sql2="select password from student_data;";
 	$result2=$conn->query($sql2);
@@ -20,7 +26,7 @@
     if(isset($_POST["username"]) && isset($_POST["pass"])){
         $member_id=$_POST["username"];
         $pass=$_POST["pass"];
-        $ret5=$conn->query("select return_date,book_name from return_data where member_id=$member_id");
+        $ret5=$conn->query("select return_date,book_name from issue_data where admission_number='$member_id'");
         $r5=$ret5->fetch_all();
         for($i=0;$i<count($s_id);$i++)
         {
@@ -38,34 +44,6 @@
                 echo "<script> location.replace('homepage.php')</script>";
             }
             else if($member_id==$s_id[$i][0] && $pass!=$s_p[$i][0])
-            {
-                echo "<script> alert('Wrong Password!!') </script>";
-                echo "<script> location.replace('login.php')</script>";
-            }
-        }
-        $sql3="select member_id from faculty_data;";
-        $result3=$conn->query($sql3);
-        $sql4="select password from faculty_data;";
-        $result4=$conn->query($sql4);
-        $f_id=$result3->fetch_all();
-        $f_p=$result4->fetch_all();
-        for($i=0;$i<count($f_id);$i++)
-        {
-            if($member_id==$f_id[$i][0] && $pass==$f_p[$i][0])
-            {
-                $_SESSION["member_id"]=$member_id;
-                $type=0;
-                $_SESSION["type"]=$type;
-                for($j=0;$j<count($r5);$j++){
-                    if($r5[$j][0]>date("d/m/y"))
-                    {
-                        echo "<script>alert('Return date expired for ".$r5[$j][1]."</script>";
-                    }
-                }
-                echo "<script> location.replace('homepage.php')</script>";
-                
-            }
-            else if($member_id==$f_id[$i][0] && $pass!=$f_p[$i][0])
             {
                 echo "<script> alert('Wrong Password!!') </script>";
                 echo "<script> location.replace('login.php')</script>";
@@ -95,13 +73,33 @@
     if (isset($_GET['login'])) {
         showLoginPage();
     }
+    $otp=rand ( 10000 , 99999 );
+    $err="";
     if(isset($_POST['mnum'])){
-        $to="pagaredeepraj05@gmail.com";
-        $subject="Test";
-        $message="Hello";
-        $from="pagaredeepraj05@gmail.com";
-        $header="From: $from";
-        mail($to,$subject,$message,$header);
+        $em=$conn->query("select email_id from student_data where email_id='".$_POST['mnum']."'");
+        $r6=$em->fetch_all();
+        if(count($r6)>0){
+            $mail = new PHPMailer(true);
+            $mail->isSMTP();
+            $mail->Host='smtp.gmail.com';
+            $mail->SMTPAuth=true;
+            $mail->Username='pagaredeepraj05@gmail.com';
+            $mail->Password='kmabxsfwmigkvshx';
+            $mail->SMTPSecure='ssl';
+            $mail->Port=465;
+            $mail->setFrom('pagaredeepraj05@gmail.com');
+            $mail->addAddress($_POST["mnum"]);
+            $mail->isHTML(true);
+            $mail->Body="OTP to Reset your password is: ".$otp;
+            $mail->Subject="Limsys Library";
+            $mail->send();
+            $_SESSION['otp']=$otp;
+            $_SESSION['email']=$_POST['mnum'];
+            echo "<script>location.href='reset_pass.php'</script>";
+        }
+        else{
+            $err='Email id not registered';
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -131,7 +129,7 @@
                     <img src="pass_logo.png" alt="" class="pass_logo">
                 <form action="" name="LogForm" method="POST">
                     <label for="username">Member Id</label><br>
-                    <input type="number" name="username" id="username" required><br>
+                    <input type="text" name="username" id="username" required><br>
                     <label for="pass">Password</label><br>
                     <input type="password" name="pass" id="pass" required>
                     <input type="submit" value="LOGIN" id="button1">
@@ -145,12 +143,13 @@
             <div class="forgot-box" style="display: <?php echo $display ?>;animation: <?php echo $animationForgot ?>">
                 <h1 id="head">Forgot Password</h1>
                 <form action="" name="ForgotForm" method="POST">
-                    <label for="mnum" class="no">Mobile Number</label><br>
-                    <input type="number" name="mnum" id="mnum" required><br>
+                    <label for="mnum" class="no">Registered Email ID</label><br>
+                    <input type="text" name="mnum" id="mnum" required><br>
                     <input type="submit" value="Send OTP" id="button2">
                 </form>
-                <p class="forgot-existing">Already an existing user?</p>
-                <a href="login.php?login" class="for_btn">Login</a>
+                <p class="forgot-existing">Not Registered?</p>
+                <a href="reg_student.php" class="for_btn">Register Here</a>
+                <p id="inv_mail"><?php echo $err?></p>
             </div>
         </div>
     </div>

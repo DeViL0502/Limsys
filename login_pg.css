@@ -42,7 +42,7 @@
     margin: 0%;
     padding: 0%;
     width: 510px;
-    background-color: #ffe8cd;
+    background-color: #fff0de;
     position: relative;
     top: 0px;
     height: 100%;
@@ -103,7 +103,7 @@ input[id=username]{
     top: 26px;
     left: 24px;
     font-family: 'poppin_medium';
-    background-color: #ffe8cd;
+    background-color: #fff0de;
 }
 input[id=pass]{
     position: relative;
@@ -117,7 +117,7 @@ input[id=pass]{
     top: 26px;
     left: 24px;
     font-family: 'poppin_medium';
-    background-color: #ffe8cd;
+    background-color: #fff0de;
 }
 input[id=username]:focus{
     border-bottom: 2px solid cyan;
@@ -237,22 +237,22 @@ label{
     box-shadow: 1px 1px 6px 2px grey
 }
 .insta-logo:hover{
-    bottom: 10px;
+    bottom: 5px;
     box-shadow: 0px 10px 10px #2a2a2a;
 }
 .facebook-logo:hover{
-    bottom: 10px;
+    bottom: 5px;
     box-shadow: 0px 10px 10px #2a2a2a;
 }
 .twitter-logo:hover{
-    bottom: 10px;
+    bottom: 5px;
     box-shadow: 0px 10px 10px #2a2a2a;
 }
 .forgot-box{
     margin: 0%;
     padding: 0%;
-    width: 510px;
-    background-color: #ffe8cd;
+    width: 540px;
+    background-color: #fff0de;
     position: relative;
     top: 0px;
     height: 100%;
@@ -290,7 +290,7 @@ input[id=mnum]{
     top: 62px;
     left: 24px;
     font-family: 'poppin_medium';
-    background-color: #ffe8cd;
+    background-color: #fff0de;
 }
 input[id=mnum]:focus{
     border-bottom: 2px solid cyan;
@@ -306,7 +306,7 @@ input[id=mnum]:focus{
     font-family: 'poppin_medium';
     font-size: 17px;
     position: relative;
-    left: 22%;
+    left: 27%;
     top: 20%;
     color: black;
 }
@@ -314,11 +314,45 @@ input[id=mnum]:focus{
     font-family: 'poppin_medium';
     font-size: 17px;
     position: relative;
-    left: 65%;
+    left: 54%;
     top: 82px;
     color: black;
     text-decoration: none;
 }
 .for_btn:hover{
     color: chocolate;
+}
+.reset_field{
+    position: relative;
+    width: 80%;
+    margin: 25px;
+    border: none;
+    border-bottom: 2px solid #333333;
+    outline: none;
+    font-size: 20px;
+    top: 62px;
+    left: 24px;
+    font-family: 'poppin_medium';
+    background-color: #fff0de;
+}
+.reset_field:focus{
+    border-bottom: 2px solid cyan;
+}
+.invalid_otp{
+    position: relative;
+    bottom: 195px;
+    left: 50px;
+    color: red;
+}
+.invalid_pass{
+    position: absolute;
+    bottom: 200px;
+    left: 50px;
+    color: red;
+}
+#inv_mail{
+    position: relative;
+    bottom: 45px;
+    left: 50px;
+    color: red;
 }

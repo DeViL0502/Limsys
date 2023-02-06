@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main-box{
+    display: flex;
+}
+.left-box{
+    width: 40%;
+}
+.right-box{
+    position: relative;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+}
+.book-image{
+    width: 65%;
+    margin: 28px;
+    position: relative;
+    left: 50px;
+    border: 2px solid;
+}
+.book-name{
+    position: relative;
+    top: 20px;
+    font-size: 2.5rem;
+    font-family: 'Poppin-Medium';
+    letter-spacing: 2px;
+}
+.book-author{
+    position: relative;
+    top: 25px;
+    font-size: 1.8rem;
+    font-family: 'Poppin-Medium';
+    color: #7f7c7c;
+}
+.issue-button{
+    position: relative;
+    top: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background: orange;
+    border: none;
+    font-size: 1.5rem;
+    font-family: 'Poppin-Medium';
+    cursor: pointer;
+    width: 100%;
+}

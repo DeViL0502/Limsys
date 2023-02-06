@@ -89,11 +89,15 @@ body{
     font-family: "Poppin_Regular";
     font-size: 1.3rem;
     position: relative;
-    right: 12.5%;
+    right: 10.5%;
+    width: 120px;
+    letter-spacing: 2px;
 }
 .returnDate{
     font-family: "Poppin_Regular";
     font-size: 1.3rem;
     position: relative;
-    right: 10.5%;
+    right: 9%;
+    width: 120px;
+    letter-spacing: 2px;
 }

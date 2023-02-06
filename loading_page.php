@@ -6,15 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <script>
-        function navigate(){
+        function navigateComp(){
             window.location.href="computer_page.php";
         }
-        setTimeout(navigate,5000);
+        function navigateIt(){
+            window.location.href="it_page.php";
+        }
+        function navigateExtc(){
+            window.location.href="extc_page.php";
+        }
+        function navigateCivil(){
+            window.location.href="civil_page.php";
+        }
+        function navigateEbook(){
+            window.location.href="ebook_page.php";
+        }
     </script>
 </head>
 <link rel="stylesheet" href="loading_page.css">
 <link rel="stylesheet" href="universal.css">
 <body>
+    <?php
+        if(isset($_GET['name'])){
+            if($_GET['name']=='comp')
+                echo '<script>setTimeout(navigateComp,5000);</script>';
+        }
+        if(isset($_GET['name'])){
+            if($_GET['name']=='it')
+                echo '<script>setTimeout(navigateIt,5000);</script>';
+        }
+        if(isset($_GET['name'])){
+            if($_GET['name']=='mech')
+                echo '<script>setTimeout(navigateMech,5000);</script>';
+        }
+        if(isset($_GET['name'])){
+            if($_GET['name']=='extc')
+                echo '<script>setTimeout(navigateExtc,5000);</script>';
+        }
+        if(isset($_GET['name'])){
+            if($_GET['name']=='ebook')
+                echo '<script>setTimeout(navigateEbook,5000);</script>';
+        }
+    ?>
     <div class="navbar">
         <div class="nav1">
             <img src="limsys_logo.png" alt="" class="limsys_logo">

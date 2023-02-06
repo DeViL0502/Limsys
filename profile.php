@@ -8,10 +8,18 @@ $database="limsys";
 $conn = new mysqli($servername, $username, $password,$database);
 
 session_start();
+$date=date("y-m-d");
 $member_id=$_SESSION["member_id"];
 $type=$_SESSION["type"];
-$sql1=$conn->query("select name,email_id,mobile_number,class from student_data where member_id=$member_id;");
+$sql1=$conn->query("select name,email_id,mobile_number from student_data where admission_number='$member_id';");
 $data=$sql1->fetch_all();
+if(isset($_POST["search"])){
+    $book_name=$_POST["search"];
+    $add = "INSERT INTO `search_data`(`admission_number`, `book_name`, `date`) VALUES (\"$member_id\",\"$book_name\",\"$date\");";
+    $conn->query($add);
+    $_SESSION['search-name']=$book_name;
+    echo "<script> location.replace('search_pg.php') </script>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,14 +59,13 @@ $data=$sql1->fetch_all();
         <img src="https://ui-avatars.com/api/?background=ffc556&name=<?php echo $data[0][0];?>" alt="profile_pic" class="name-logo">
         <h1 id="n1">Name</h1>
         <p id="n2"><?php echo $data[0][0] ?></p>
-        <h1 id="g1">Class</h1>
-        <p id="g2"><?php echo $data[0][3] ?></p>
-        <h1 id="c1">Member Id</h1>
+        <h1 id="g1">Email Id</h1>
+        <p id="g2"><?php echo $data[0][1] ?></p>
+        <h1 id="c1">Admission Number</h1>
         <p id="c2"><?php echo $member_id ?></p>
-        <h1 id="e1">Email Id</h1>
-        <p id="e2"><?php echo $data[0][1] ?></p>
         <h1 id="m1">Mobile Number</h1>
         <p id="m2"><?php echo $data[0][2] ?></p>
+        <a href="/Limsys"><button class="btn"> Logout</button></a>
     </div>
     <div class="footer">
         <div class="foo1">

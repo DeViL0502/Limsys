@@ -10,16 +10,15 @@
 
   
 
-  if(isset($_POST["CollegeId"])){
-    $member_id=$_POST["CollegeId"];
-    $pass=$_POST["Password"];
-    $st_name=strtoupper($_POST["StudentName"]);
-    $email_id=$_POST["EmailId"];
-    $mb=$_POST["MobileNumber"];
-    $class=strtoupper($_POST["Class"]);
+  if(isset($_POST["username"])){
+    $member_id=$_POST["username"];
+    $pass=$_POST["pass"];
+    $st_name=strtoupper($_POST["name"]);
+    $email_id=$_POST["email"];
+    $mb=$_POST["m_number"];
 
-    $sql = "INSERT INTO `student_data`(`member_id`, `password`, `name`, `email_id`, `mobile_number`, `class`, `gender`) VALUES ($member_id,\"$pass\",\"$st_name\",\"$email_id\",\"$mb\",\"$class\");";
-    $sql2= "SELECT member_id FROM faculty_data WHERE member_id=$member_id;";
+    $sql = "INSERT INTO `student_data`(`admission_number`, `password`, `name`, `email_id`, `mobile_number`) VALUES (\"$member_id\",\"$pass\",\"$st_name\",\"$email_id\",\"$mb\");";
+    $sql2= "SELECT admission_number FROM student_data WHERE admission_number='$member_id';";
     $st_id=$conn->query($sql2);
     $result=$st_id->fetch_assoc();
     if(is_null($result)){
@@ -28,18 +27,14 @@
         $_SESSION["member_id"]=$member_id;
         echo "<script> alert('Registration Successfull!!') </script>" ;
         echo "<script> window.location='homepage.php';</script>";
-        $_SESSION["member_id"]=$member_id;
-        $_SESSION["type"]=1;
       }
       catch (Exception $e) {
-        echo "<script> alert('Member Id Already Registered!!Click to Login') </script>";
+        echo "<script> alert('Student Already Registered!!') </script>";
         echo "<script> window.location='login.php';</script>";
       }
     }
-    else{
-      echo "<script> alert('Member Id Already Registered!!Click to Login') </script>";
-      echo "<script> window.location='login.php';</script>";
-    }
+    echo "<script> alert('Student Already Registered!!') </script>";
+    echo "<script> window.location='login.php';</script>";
   }
 ?>
 <!DOCTYPE html>
@@ -48,16 +43,15 @@
   <title>Register</title>
   <script>
     function validateForm(){
-      var MemberId=document.RegForm.MemberId.value;
-      var Password=document.RegForm.Password.value;
-      var StudentName=document.RegForm.StudentName.value;
-      var EmailId=document.RegForm.EmailId.value;
-      var MobileNumber=document.RegForm.MobileNumber.value;
-      var Class=document.RegForm.Class.value;
-      var Gender=document.RegForm.Gender.value;
+      var MemberId=document.RegForm.username.value;
+      var Password=document.RegForm.pass.value;
+      var StudentName=document.RegForm.name.value;
+      var EmailId=document.RegForm.email.value;
+      var MobileNumber=document.RegForm.m_number.value;
       var format1 = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
       var format2 = /[abcdefghijklmnopqrstuvwzyzABCDEFGHIJKLMNOPQRSTUVWXYZ]+/;
       var format3 = /[1234567890]+/;
+      var emailtest= '@student.mes.ac.in';
 
       if (MemberId == ""){
         alert("Enter Member ID");
@@ -85,16 +79,12 @@
         alert("Enter Student Name");
         return false;
       }
-      if (EmailId == ""){
-        alert("Enter Email ID");
+      if (EmailId.substr(-18) != "@student.mes.ac.in"){
+        alert("Enter College Email ID");
         return false;
       }
       if (MobileNumber.length !=10){
         alert("Invalid Mobile Number");
-        return false;
-      }
-      if (Class == ""){
-        alert("Enter Class");
         return false;
       }
       else{
@@ -109,24 +99,15 @@
         <h1 id="head">Register</h1>
         <form name="RegForm" action="" onsubmit="return validateForm()" method="post">
             <label for="username" id="ci">Admission Number</label><br>
-            <input type="number" name="CollegeId" id="username"><br>
+            <input type="text" name="username" id="username" required><br>
             <label for="pass" id="ps">Password</label><br>
-            <input type="password" name="Password" id="pass">
+            <input type="password" name="pass" id="pass" required>
             <label for="name" id="sn">Student Name</label><br>
-            <input type="text" name="StudentName" id="name"><br>
+            <input type="text" name="name" id="name" required><br>
             <label for="email" id="mi">Email Id</label><br>
-            <input type="text" name="EmailId" id="email"><br>
+            <input type="text" name="email" id="email" required><br>
             <label for="m_number" id="mn">Mobile Number</label><br>
-            <input type="text" name="MobileNumber" id="m_number" ><br>
-            <label for="class" id="cs">Class</label><br>
-            <input type="text" name="Class" id="class" placeholder="FY-B"><br>
-            <!-- <label id="gender">Gender</label>
-            <input type="radio" id="male" name="Gender" value="MALE" >
-            <label for="male" id="m">MALE</label>
-            <input type="radio" id="female" name="Gender" value="FEMALE">
-            <label for="female" id="f">FEMALE</label>
-            <input type="radio" id="other" name="Gender" value="OTHER">
-            <label for="other" id="o">OTHER</label> -->
+            <input type="text" name="m_number" id="m_number" required><br>
             <input type="submit" value="REGISTER" id="button2">
         </form>
     </div>

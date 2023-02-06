@@ -10,7 +10,7 @@
 	$sql1="select book_name,author,img from books_data;";
 	$result1=$conn->query($sql1);
     $data=$result1->fetch_all();
-
+    session_start()
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,21 +45,26 @@
             </div>
         </div>
     </div>
+        <script>
+            function navigate(to){
+                window.location.href='issuePage.php?name='+to;
+            }
+        </script>
         <div class="main-box">
             <h1 class="head-text">COMPUTER ENGINEERING BOOKS</h1>
             <div class="sem1">
                 <h3 class="sem1-head">SEM - I</h3>
                 <div class="sem1-card">
-                    <div class="book-card" style="margin-left: 5px;">
-                        <img src="instrumentation_systems.jpg" alt="" class="card-img">
-                        <h1 class="book-name">Intrumentation Systems</h1>
-                        <h3 class="author-name">M.D.Bhagat</h3>
+                    <div class="book-card" style="margin-left: 5px;" onclick="navigate('<?php echo $data[0][0] ?>')">
+                        <img src="<?php echo $data[0][2] ?>.jpg" alt="" class="card-img">
+                        <h1 class="book-name"><?php echo $data[0][0] ?></h1>
+                        <h3 class="author-name"><?php echo $data[0][1] ?></h3>
                         <img src="counter-icon.png" alt="" class="counter-icon">
                         <p class="counter-number">11001</p>
                     </div>
                     <?php
-                    for ($i=0; $i < count($data); $i++) { 
-                        echo ('<div class="book-card">');
+                    for ($i=1; $i < 10; $i++) { 
+                        echo ('<div class="book-card"  onclick="navigate(\''.$data[$i][0].'\')">');
                         echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
                         echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
                         echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
@@ -73,16 +78,16 @@
             <div class="sem1">
                 <h3 class="sem1-head">SEM - II</h3>
                 <div class="sem1-card">
-                    <div class="book-card" style="margin-left: 5px;">
-                        <img src="instrumentation_systems.jpg" alt="" class="card-img">
-                        <h1 class="book-name">Intrumentation Systems</h1>
-                        <h3 class="author-name">M.D.Bhagat</h3>
+                    <div class="book-card" style="margin-left: 5px;" onclick="navigate('<?php echo $data[6][0] ?>')">
+                        <img src="<?php echo $data[6][2] ?>.jpg" alt="" class="card-img">
+                        <h1 class="book-name"><?php echo $data[6][0] ?></h1>
+                        <h3 class="author-name"><?php echo $data[6][1] ?></h3>
                         <img src="counter-icon.png" alt="" class="counter-icon">
                         <p class="counter-number">11001</p>
                     </div>
                     <?php
-                    for ($i=0; $i < count($data); $i++) { 
-                        echo ('<div class="book-card">');
+                    for ($i=7; $i < 18; $i++) { 
+                        echo ('<div class="book-card" onclick="navigate(\''.$data[$i][0].'\')">');
                         echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
                         echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
                         echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
@@ -96,16 +101,16 @@
             <div class="sem1">
                 <h3 class="sem1-head">SEM - III</h3>
                 <div class="sem1-card">
-                    <div class="book-card" style="margin-left: 5px;">
-                        <img src="instrumentation_systems.jpg" alt="" class="card-img">
-                        <h1 class="book-name">Intrumentation Systems</h1>
-                        <h3 class="author-name">M.D.Bhagat</h3>
+                    <div class="book-card" style="margin-left: 5px;" onclick="navigate('<?php echo $data[0][0] ?>')">
+                        <img src="<?php echo $data[0][2] ?>.jpg" alt="" class="card-img">
+                        <h1 class="book-name"><?php echo $data[0][0] ?></h1>
+                        <h3 class="author-name"><?php echo $data[0][1] ?></h3>
                         <img src="counter-icon.png" alt="" class="counter-icon">
                         <p class="counter-number">11001</p>
                     </div>
                     <?php
-                    for ($i=0; $i < count($data); $i++) { 
-                        echo ('<div class="book-card">');
+                    for ($i=1; $i < 6; $i++) { 
+                        echo ('<div class="book-card" onclick="navigate(\''.$data[$i][0].'\')">');
                         echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
                         echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
                         echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
@@ -128,7 +133,7 @@
                     </div>
                     <?php
                     for ($i=0; $i < count($data); $i++) { 
-                        echo ('<div class="book-card">');
+                        echo ('<div class="book-card" onclick="navigate(\''.$data[$i][0].'\')">');
                         echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
                         echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
                         echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
@@ -151,7 +156,7 @@
                     </div>
                     <?php
                     for ($i=0; $i < count($data); $i++) { 
-                        echo ('<div class="book-card">');
+                        echo ('<div class="book-card" onclick="navigate(\''.$data[$i][0].'\')">');
                         echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
                         echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
                         echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
@@ -174,7 +179,7 @@
                     </div>
                     <?php
                     for ($i=0; $i < count($data); $i++) { 
-                        echo ('<div class="book-card">');
+                        echo ('<div class="book-card" onclick="navigate(\''.$data[$i][0].'\')">');
                         echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
                         echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
                         echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
@@ -197,7 +202,7 @@
                     </div>
                     <?php
                     for ($i=0; $i < count($data); $i++) { 
-                        echo ('<div class="book-card">');
+                        echo ('<div class="book-card" onclick="navigate(\''.$data[$i][0].'\')">');
                         echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
                         echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
                         echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
@@ -220,7 +225,7 @@
                     </div>
                     <?php
                     for ($i=0; $i < count($data); $i++) { 
-                        echo ('<div class="book-card">');
+                        echo ('<div class="book-card" onclick="navigate(\''.$data[$i][0].'\')">');
                         echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
                         echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
                         echo('<h3 class="author-name">'.$data[$i][1].'</h3>');

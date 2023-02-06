@@ -57,6 +57,7 @@
 }
 .form-button{
     border: none;
+    background-color: white;
 }
 .search-btn{
     position: relative;

@@ -102,11 +102,7 @@
         </div>
     </div>
     <div class="tags">
-        <img src="admin_logo_m.jpg">       <!-- For Male Admin Profle Pic-->
-
-        <!-- 
-        <img src="admin_logo_f.png">        For Female Admin Profle Pic
-        -->
+        <img src="admin_logo_m.jpg">
         <p>Admin</p>
         <p>Deepraj Anil Pagare</p>
         <a href="admin_homepage.php" style="text-decoration: none;">
