@@ -56,7 +56,7 @@ if(isset($_POST["search"])){
         </div>
     </div>
     <div class="box">
-        <img src="https://ui-avatars.com/api/?background=ffc556&name=<?php echo $data[0][0];?>" alt="profile_pic" class="name-logo">
+        <img src="https://ui-avatars.com/api/?background=ffc556&name=<?php echo $data[0][0];?>" alt="profile_pic" class="nawme-logo">
         <h1 id="n1">Name</h1>
         <p id="n2"><?php echo $data[0][0] ?></p>
         <h1 id="g1">Email Id</h1>

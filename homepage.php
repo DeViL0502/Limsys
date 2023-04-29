@@ -58,7 +58,7 @@ if(isset($_POST["search"])){
 <link rel="stylesheet" href="universal.css">
 <body>
     <div class="popup" id="popup" style=<?php echo $display?>>
-        <img src="<?php echo $bd[0][1] ?>.jpg" alt="" class="popup-book-img">
+        <img src="<?php echo $bd[0][1] ?>" alt="" class="popup-book-img">
         <div class="popup-innerBox">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flat_cross_icon.svg/1024px-Flat_cross_icon.svg.png" alt="" class="popup-cross"  onclick="return popupClose()">
             <h1 class="popup-head">Return Date Expired</h1>
@@ -151,10 +151,10 @@ if(isset($_POST["search"])){
             </div>
             <div class="projectby" style="width: 37%;">
                 <p class="foo2-head">Location</p>
-                <p style="margin-top: 10px;width:90%"><a href="https://goo.gl/maps/568aA67ydMaCWZhr9" class="foo2-item">Dr. K. M. Vasudevan Pillai Campus, Plot No. 10, Sector 16, New Panvel East, Navi Mumbai, Maharashtra 410206</a></p>
+                <p style="margin-top: 10px;width:90%"><a href="https://goo.gl/maps/568aA67ydMaCWZhr9" class="foo2-item">Pratik Gardens CHS, Sector 34, Kamothe, Navi Mumbai, 410209</a></p>
             </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.669434283395!2d73.12548141489991!3d18.990200987137168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e866de88667f%3A0xc1c5d5badc610f5f!2sPillai%20College%20of%20Engineering%2C%20New%20Panvel!5e0!3m2!1sen!2sin!4v1674372496022!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15087.936761976285!2d73.0874641!3d19.0204183!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c2789bd9cd07%3A0x369836fb513895ba!2sPratik%20Gardens!5e0!3m2!1sen!2sin!4v1676001548568!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
     </div>
 </body>
 </html> 

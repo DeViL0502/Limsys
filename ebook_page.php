@@ -7,7 +7,7 @@
 	// Create connection
 	$conn = new mysqli($servername, $username, $password,$database);
 
-	$sql1="select book_name,author,img from books_data;";
+	$sql1="select book_name,author,img from books_data where category='ebook';";
 	$result1=$conn->query($sql1);
     $data=$result1->fetch_all();
     session_start();
@@ -28,7 +28,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <link rel="stylesheet" href="computer_page.css">
+    <link rel="stylesheet" href="ebook_page.css">
     <link rel="stylesheet" href="universal.css">
     <body>
     <div class="navbar">
@@ -56,190 +56,28 @@
     </div>
         <script>
             function navigate(to){
-                window.location.href='issuePage.php?name='+to;
+                window.location.href='pdf_download.php?name='+to;
             }
         </script>
         <div class="main-box">
             <h1 class="head-text">EBOOKS BOOKS</h1>
             <div class="sem1">
-                <h3 class="sem1-head">SEM - I</h3>
                 <div class="sem1-card">
                     <div class="book-card" style="margin-left: 5px;" onclick="navigate('<?php echo $data[0][0] ?>')">
-                        <img src="<?php echo $data[0][2] ?>.jpg" alt="" class="card-img">
+                        <img src="<?php echo $data[0][2] ?>" alt="" class="card-img">
                         <h1 class="book-name"><?php echo $data[0][0] ?></h1>
                         <h3 class="author-name"><?php echo $data[0][1] ?></h3>
                         <img src="counter-icon.png" alt="" class="counter-icon">
-                        <p class="counter-number">11001</p>
+                        <p class="counter-number">26</p>
                     </div>
                     <?php
-                    for ($i=1; $i < 10; $i++) { 
+                    for ($i=1; $i < 8; $i++) { 
                         echo ('<div class="book-card"  onclick="navigate(\''.$data[$i][0].'\')">');
-                        echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
+                        echo('<img src="'.$data[$i][2].'" alt="" class="card-img">');
                         echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
                         echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
                         echo('<img src="counter-icon.png" alt="" class="counter-icon">');
-                        echo('<p class="counter-number">11001</p>');
-                        echo('</div>');
-                    }
-                    ?>
-                </div>
-            </div>
-            <div class="sem1">
-                <h3 class="sem1-head">SEM - II</h3>
-                <div class="sem1-card">
-                    <div class="book-card" style="margin-left: 5px;" onclick="navigate('<?php echo $data[6][0] ?>')">
-                        <img src="<?php echo $data[6][2] ?>.jpg" alt="" class="card-img">
-                        <h1 class="book-name"><?php echo $data[6][0] ?></h1>
-                        <h3 class="author-name"><?php echo $data[6][1] ?></h3>
-                        <img src="counter-icon.png" alt="" class="counter-icon">
-                        <p class="counter-number">11001</p>
-                    </div>
-                    <?php
-                    for ($i=7; $i < 18; $i++) { 
-                        echo ('<div class="book-card">');
-                        echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
-                        echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
-                        echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
-                        echo('<img src="counter-icon.png" alt="" class="counter-icon">');
-                        echo('<p class="counter-number">11001</p>');
-                        echo('</div>');
-                    }
-                    ?>
-                </div>
-            </div>
-            <div class="sem1">
-                <h3 class="sem1-head">SEM - III</h3>
-                <div class="sem1-card">
-                    <div class="book-card" style="margin-left: 5px;" onclick="navigate('<?php echo $data[0][0] ?>')">
-                        <img src="<?php echo $data[0][2] ?>.jpg" alt="" class="card-img">
-                        <h1 class="book-name"><?php echo $data[0][0] ?></h1>
-                        <h3 class="author-name"><?php echo $data[0][1] ?></h3>
-                        <img src="counter-icon.png" alt="" class="counter-icon">
-                        <p class="counter-number">11001</p>
-                    </div>
-                    <?php
-                    for ($i=1; $i < 6; $i++) { 
-                        echo ('<div class="book-card">');
-                        echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
-                        echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
-                        echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
-                        echo('<img src="counter-icon.png" alt="" class="counter-icon">');
-                        echo('<p class="counter-number">11001</p>');
-                        echo('</div>');
-                    }
-                    ?>
-                </div>
-            </div>
-            <div class="sem1">
-                <h3 class="sem1-head">SEM - IV</h3>
-                <div class="sem1-card">
-                    <div class="book-card" style="margin-left: 5px;">
-                        <img src="instrumentation_systems.jpg" alt="" class="card-img">
-                        <h1 class="book-name">Intrumentation Systems</h1>
-                        <h3 class="author-name">M.D.Bhagat</h3>
-                        <img src="counter-icon.png" alt="" class="counter-icon">
-                        <p class="counter-number">11001</p>
-                    </div>
-                    <?php
-                    for ($i=0; $i < count($data); $i++) { 
-                        echo ('<div class="book-card">');
-                        echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
-                        echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
-                        echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
-                        echo('<img src="counter-icon.png" alt="" class="counter-icon">');
-                        echo('<p class="counter-number">11001</p>');
-                        echo('</div>');
-                    }
-                    ?>
-                </div>
-            </div>
-            <div class="sem1">
-                <h3 class="sem1-head">SEM - V</h3>
-                <div class="sem1-card">
-                    <div class="book-card" style="margin-left: 5px;">
-                        <img src="instrumentation_systems.jpg" alt="" class="card-img">
-                        <h1 class="book-name">Intrumentation Systems</h1>
-                        <h3 class="author-name">M.D.Bhagat</h3>
-                        <img src="counter-icon.png" alt="" class="counter-icon">
-                        <p class="counter-number">11001</p>
-                    </div>
-                    <?php
-                    for ($i=0; $i < count($data); $i++) { 
-                        echo ('<div class="book-card">');
-                        echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
-                        echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
-                        echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
-                        echo('<img src="counter-icon.png" alt="" class="counter-icon">');
-                        echo('<p class="counter-number">11001</p>');
-                        echo('</div>');
-                    }
-                    ?>
-                </div>
-            </div>
-            <div class="sem1">
-                <h3 class="sem1-head">SEM - VI</h3>
-                <div class="sem1-card">
-                    <div class="book-card" style="margin-left: 5px;">
-                        <img src="instrumentation_systems.jpg" alt="" class="card-img">
-                        <h1 class="book-name">Intrumentation Systems</h1>
-                        <h3 class="author-name">M.D.Bhagat</h3>
-                        <img src="counter-icon.png" alt="" class="counter-icon">
-                        <p class="counter-number">11001</p>
-                    </div>
-                    <?php
-                    for ($i=0; $i < count($data); $i++) { 
-                        echo ('<div class="book-card">');
-                        echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
-                        echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
-                        echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
-                        echo('<img src="counter-icon.png" alt="" class="counter-icon">');
-                        echo('<p class="counter-number">11001</p>');
-                        echo('</div>');
-                    }
-                    ?>
-                </div>
-            </div>
-            <div class="sem1">
-                <h3 class="sem1-head">SEM - VII</h3>
-                <div class="sem1-card">
-                    <div class="book-card" style="margin-left: 5px;">
-                        <img src="instrumentation_systems.jpg" alt="" class="card-img">
-                        <h1 class="book-name">Intrumentation Systems</h1>
-                        <h3 class="author-name">M.D.Bhagat</h3>
-                        <img src="counter-icon.png" alt="" class="counter-icon">
-                        <p class="counter-number">11001</p>
-                    </div>
-                    <?php
-                    for ($i=0; $i < count($data); $i++) { 
-                        echo ('<div class="book-card">');
-                        echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
-                        echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
-                        echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
-                        echo('<img src="counter-icon.png" alt="" class="counter-icon">');
-                        echo('<p class="counter-number">11001</p>');
-                        echo('</div>');
-                    }
-                    ?>
-                </div>
-            </div>
-            <div class="sem1">
-                <h3 class="sem1-head">SEM - VIII</h3>
-                <div class="sem1-card">
-                    <div class="book-card" style="margin-left: 5px;">
-                        <img src="instrumentation_systems.jpg" alt="" class="card-img">
-                        <h1 class="book-name">Intrumentation Systems</h1>
-                        <h3 class="author-name">M.D.Bhagat</h3>
-                        <img src="counter-icon.png" alt="" class="counter-icon">
-                        <p class="counter-number">11001</p>
-                    </div>
-                    <?php
-                    for ($i=0; $i < count($data); $i++) { 
-                        echo ('<div class="book-card">');
-                        echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
-                        echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
-                        echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
-                        echo('<img src="counter-icon.png" alt="" class="counter-icon">');
-                        echo('<p class="counter-number">11001</p>');
+                        echo('<p class="counter-number">33</p>');
                         echo('</div>');
                     }
                     ?>

@@ -90,34 +90,3 @@
 .welcome-btn:hover{
     background: bisque;
 }
-.welcome-clock{
-    background-color: bisque;
-}
-.clock {  
-    position: relative;
-    top: 15%;
-    transform: translateX(-50%) translateY(-50%);
-    color: #cc3f29;
-    font-size: 40px;
-    font-family: 'Poppin-Bold';
-    margin: auto;
-    width: 320px;
-    left: 12%;
-    padding: 0px 5px 15px 10px;
-    border: 1px solid;
-    border-radius: 10px;
-    background: bisque;
-    text-align: center;
-    letter-spacing: 8px;
-    border: 0.5px solid black;
-}  
-.clock-label{
-    display: flex;
-    position: relative;
-    font-family: 'Poppin-Bold';
-    font-size: 1rem;
-    top: 5.5%;
-    left: 42%;
-    letter-spacing: 2px;
-    width: 0%;
-}

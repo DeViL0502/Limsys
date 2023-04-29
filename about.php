@@ -55,7 +55,7 @@ if(isset($_POST["search"])){
     <h1 class="about-head">About</h1>
     <p class="about-text">Limsys is all about library management system in college that makes library work easy for students to get books from library.
     </p>
-    <div class="box">
+    <div class="box" style="height: 400px">
         <img src="clg_logo.png" id="clg_logo">
         <img src="limsys_logo.png" id="lib_logo">
         <h1 id="clg_name">Pillai College Of Engineering, New Panvel</h1>

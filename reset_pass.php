@@ -11,6 +11,7 @@
         if($otp==$_POST['otp']){
             $sql="UPDATE student_data SET `password`='".$_POST['npass']."' WHERE email_id='".$_SESSION['email']."'";
             $conn->query($sql);
+            echo "<script>alert('Successfully Password Changed')</script>";
             echo "<script>location.href='login.php'</script>";
         }
     }

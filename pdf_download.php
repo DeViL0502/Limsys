@@ -5,7 +5,7 @@
 	$database="limsys";
 	
 	$conn = new mysqli($servername, $username, $password,$database);
-	$sql1="select book_name,author,img from books_data where book_name='".$_GET['name']."';";
+	$sql1="select book_name,author,img,sem from books_data where book_name='".$_GET['name']."';";
 	$result1=$conn->query($sql1);
     $data=$result1->fetch_all();
 ?>
@@ -49,7 +49,7 @@
 			<div class="right-box">
 				<h1 class="book-name"><?php echo $data[0][0] ?></h1>
 				<h7 class="book-author"><?php echo $data[0][1] ?></h7>
-				<a href="final_issue.php?name=<?php echo $data[0][0]?>"><button class="issue-button">ISSUE BOOK</button></a>
+				<a href="<?php echo $data[0][3] ?>"><button class="issue-button">DOWNLOAD BOOK</button></a>
 			</div>
 		</div>
 		<div class="footer">

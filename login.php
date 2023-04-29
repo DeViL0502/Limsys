@@ -30,7 +30,7 @@
         $r5=$ret5->fetch_all();
         for($i=0;$i<count($s_id);$i++)
         {
-            if($member_id==$s_id[$i][0] && $pass==$s_p[$i][0])
+            if($member_id==$s_id[$i][0] && password_verify($_POST["pass"],$s_p[0][0]))
             {
                 $_SESSION["member_id"]=$member_id;
                 $type=1;
@@ -130,11 +130,11 @@
                 <form action="" name="LogForm" method="POST">
                     <label for="username">Member Id</label><br>
                     <input type="text" name="username" id="username" required><br>
-                    <label for="pass">Password</label><br>
+                    <label for="pass" class="pass">Password</label><br>
                     <input type="password" name="pass" id="pass" required>
                     <input type="submit" value="LOGIN" id="button1">
                 </form>
-                <a href='login.php?forgot' style="text-decoration: none;">
+                <a href='login.php' style="text-decoration: none;">
                     <h2 id="forgot">Forgot Password?</h2>
                 </a>
                 <p class="existing">Not an existing user?</p>

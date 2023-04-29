@@ -41,8 +41,10 @@
 }
 .sem1-card{
   display: flex;
+  flex-wrap: wrap;
   margin-top: 10px;
   margin-bottom: 30px;
+  justify-content: space-evenly;
 }
 .book-card{  
     display: block;
@@ -58,14 +60,14 @@
     position: relative;
     cursor: pointer;
     border-radius: 15px;
-    width: 250px;
+    width: 270px;
 }
 .book-card:hover{
     bottom: 5px;
     box-shadow: 0px 1px 4px 1px #686868;
 }
 .card-img{
-    width: 250px;
+    width: 270px;
     height: 330px;
     border-radius: 10px;
 }

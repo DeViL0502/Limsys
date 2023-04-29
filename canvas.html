@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <style>
+      body{
+	margin:0;
+	padding:0;  
+      }
+      canvas {
+        margin: 0;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1280" height="900"></canvas>
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle= "lightblue";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.font = "30px Arial";
+      ctx.fillStyle= "white";
+      ctx.fillRect(100, 20, 600, 200);
+      ctx.fillStyle = "black";
+      ctx.fillText("Contact Us", 50, 50);
+      ctx.font = "20px Arial";
+      ctx.fillText("Address:",50,180);	 
+      ctx.fillText("Pillai College Of Engineering, New Panvel, Maharashtra 410210", 130, 180);
+      ctx.fillText("Phone: 8282691714", 50, 140);
+      ctx.fillText("Email: pagaredeepraj05@gmail.com", 50, 100);
+    </script>
+  </body>
+</html>

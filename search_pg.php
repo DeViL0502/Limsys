@@ -10,6 +10,14 @@
 	$sql1 ="SELECT book_name,author,img FROM `books_data` where book_name like '%$name%';";
 	$result1=$conn->query($sql1);
     $data=$result1->fetch_all();
+
+    if(isset($_POST["search"])){
+        $book_name=$_POST["search"];
+        $add = "INSERT INTO `search_data`(`admission_number`, `book_name`, `date`) VALUES (\"$member_id\",\"$book_name\",\"$date\");";
+        $conn->query($add);
+        $_SESSION['search-name']=$book_name;
+        echo "<script> location.replace('search_pg.php') </script>";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,13 +40,13 @@
                 <img src="limsys_logo.png" alt="" class="limsys_logo">
                 <h1 class="nav-name">Limsys</h1>
                 <form action="" method="POST" name="searchInput">
-                    <input type="text" placeholder="Search" class="search-bar" name="search" id="search">
-                    <button class="form-button">
-                        <div class="search-btn">
-                            <img src="search-icon.png" alt="" class="search-icon">
-                        </div>
-                    </button>
-                </form>
+                <input type="text" placeholder="Search" class="search-bar" name="search" id="search">
+                <button class="form-button">
+                    <div class="search-btn">
+                        <img src="search-icon.png" alt="" class="search-icon">
+                    </div>
+                </button>
+            </form>
             </div>
             <div class="nav2">
                 <div class="nav-tabs">
@@ -63,7 +71,7 @@
                     }
                     for ($i=0; $i < count($data); $i++) { 
                         echo ('<div class="book-card-search"  onclick="navigate(\''.$data[$i][0].'\')">');
-                        echo('<img src="'.$data[$i][2].'.jpg" alt="" class="card-img">');
+                        echo('<img src="'.$data[$i][2].'" alt="" class="card-img">');
                         echo('<h1 class="book-name">'.$data[$i][0].'</h1>');
                         echo('<h3 class="author-name">'.$data[$i][1].'</h3>');
                         echo('<img src="counter-icon.png" alt="" class="counter-icon">');

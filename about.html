@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+    .limsys_logo{
+        width: 70px;
+        position: relative;
+        top: -17%;
+        z-index: 2;
+        left: 10px;
+        padding: 5px;
+    }
+    .nav1{
+        position: relative;
+        width: 100%;
+        display: flex;
+        background-color: white;
+    }
+    .nav2{
+        position: relative;
+        width: 100%;
+        background-color: #2fb0e9;
+        height: 60px;
+    }
+    .nav-name{
+        font-size: 2.8rem;
+        position: relative;
+        font-family: "EBGaramond-Italic";
+        top: 2px;
+        left: 10px;
+    }
+    .search-bar{
+        position: relative;
+        width: 500px;
+        border-radius: 20px;
+        height: 40px;
+        border: 1px solid;
+        top: 8px;
+        left: 128%;
+        font-size: 20px;
+        padding-left: 15px;
+    }
+    .search-bar:focus{
+        outline: none;
+    }
+    .form-button{
+        border: none;
+        background-color: white;
+    }
+    .search-btn{
+        position: relative;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 60px;
+        background-color: #2fb0e9;
+        height: 40px;
+        left: 681px;
+        top: 13.5px;
+        border: 1px solid;
+        border-left: 0;
+        cursor: pointer;
+    }
+    .search-icon{
+        position: relative;
+        width: 40px;
+        top: 3px;
+        left: 0px;
+    }
+    .nav-tabs{
+        display: flex;
+        margin-left: 33px;
+    }
+    .tab{
+        margin-right: 30px;
+        font-size: 1.8rem;
+        color: white;
+        font-family: "Poppin-Medium";
+        margin-top: 8px;
+        text-decoration: none;
+    }
+    .insta-logo{
+        width:40px;
+        height: 40px;
+    }
+    .twitter-logo{
+        width:40px;
+        height: 40px;
+    }
+    .facebook-logo{
+        width:40px;
+        height: 40px;
+    }
+    .insta-logo:hover{
+        bottom: 5px;
+    }
+    .facebook-logo:hover{
+        bottom: 5px;
+    }
+    .twitter-logo:hover{
+        bottom: 5px;
+    }
+    </style>
+</head>
+<link rel="stylesheet" href="about-page.css">
+<body>
+    <div class="navbar">
+        <div class="nav1">
+            <img src="limsys_logo.png" alt="" class="limsys_logo">
+            <h1 class="nav-name">Limsys</h1>
+            <form action="" method="POST" name="searchInput">
+                <input type="text" placeholder="Search" class="search-bar" name="search" id="search">
+                <button class="form-button">
+                    <div class="search-btn">
+                        <img src="search-icon.png" alt="" class="search-icon">
+                    </div>
+                </button>
+            </form>
+        </div>
+        <div class="nav2">
+            <div class="nav-tabs">
+                <a class="tab" href="homepage.php">HOME</a>
+                <a class="tab" href="profile.php">PROFILE</a>
+                <a class="tab" href="books.php">ISSUED</a>
+                <a class="tab" href="history.php">HISTORY</a>
+                <a class="tab" href="about.php" style="color: black;font-weight:600">ABOUT</a>
+            </div>
+        </div>
+    </div>
+    <h1 class="about-head">About</h1>
+    <p class="about-text">Limsys is all about library management system in college that makes library work easy for students to get books from library.
+    </p>
+    <div class="box" style="background-color: #2fb0e9;">
+        <img src="clg_logo.png" id="clg_logo">
+        <img src="limsys_logo.png" id="lib_logo">
+        <h1 id="clg_name">Pillai College Of Engineering, New Panvel</h1>
+        <h1 id="lib_name">Library Management Project</h1>
+        <img src="pillai_logo.png" alt="" class="pillai_logo">
+    </div>
+</body>
+</html>
